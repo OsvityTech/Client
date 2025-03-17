@@ -9,7 +9,7 @@ const UsingUnstop = () => {
   const cards = [
     {
       image: img1,
-      title: "Students and Professionals",
+      title: "Studentss and Professionals",
       description:
         "Unlock Your Potential: Compete, Build Resume, Grow and get Hired!",
     },
