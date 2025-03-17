@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Logo and Contact Section */}
           <Grid item xs={12} md={4}>
             <Typography variant="body2" sx={{ mb: 2 }}>
-              Build with favorite in India for the world
+              Built with favorite in India for the world
             </Typography>
 
             <Typography
