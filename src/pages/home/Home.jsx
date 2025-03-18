@@ -18,6 +18,7 @@ const Home = () => {
         flexWrap: "wrap",
         gap: `${scaleWidth(20)}px`,
         justifyContent: "center",
+        position: "relative",
         background:
           "linear-gradient(to top, transparent 50%, transparent 80%, #7a5feb 97%, #ad9ff3 100%)",
       }}
@@ -28,11 +29,66 @@ const Home = () => {
       <ProfileList />
       <UsingUnstop />
       <CourseCard />
-      <OpportunityCard/>
-      <UpdatedCard/>
-      <Footer/>
-      {/* <Unlock />
-        <UsingUnstop /> */}
+      <OpportunityCard />
+      <UpdatedCard />
+      <Footer />
+
+      <div
+        style={{
+          position: "absolute",
+          left: "-3%",
+          bottom: "0px",
+          width: "220px",
+          height: "150px",
+          borderRadius: "70%",
+          background: "#7a5feb",
+          filter: "blur(45px)",
+          opacity: "1",
+          zIndex: 1,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          left: "20%",
+          bottom: "0px",
+          width: "220px",
+          height: "150px",
+          borderRadius: "70%",
+          background: "#7a5feb",
+          filter: "blur(45px)",
+          opacity: "1",
+          zIndex: 1,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          right: "20%",
+          bottom: "0px",
+          width: "220px",
+          height: "150px",
+          borderRadius: "70%",
+          background: "#7a5feb",
+          filter: "blur(45px)",
+          opacity: "1",
+          zIndex: 1,
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          right: "3%",
+          bottom: "0px",
+          width: "220px",
+          height: "150px",
+          borderRadius: "70%",
+          background: "#7a5feb",
+          filter: "blur(45px)",
+          opacity: "1",
+          zIndex: 1,
+        }}
+      />
     </div>
   );
 };
