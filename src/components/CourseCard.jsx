@@ -18,7 +18,7 @@ const CourseInfo = () => {
           />
         </Box>
 
-        {/* Right Text Section */}
+        
         <Box width="50%" p={1} bgcolor="#f3f4f6">
           <Typography variant="h5" fontWeight="bold" mb={1} ml={3}>
             Learn & Level UP Your Skill
