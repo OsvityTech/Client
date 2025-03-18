@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Typography, TextField, Button, InputAdornment } from "@mui/material";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import SearchIcon from "@mui/icons-material/Search";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import BusinessCenterIcon from "../assets/business.svg";
+import SearchIcon from "../assets/search.svg";
+import LocationOnIcon from "../assets/location.svg";
 import { scaleWidth, scaleHeight, scaleFont } from "../helpers/Scalefactor";
 
 const SearchBar = () => {
@@ -10,7 +10,7 @@ const SearchBar = () => {
     <Box
       sx={{
         textAlign: "center",
-        padding: `${scaleHeight(50)}px ${scaleWidth(20)}px`,
+        padding: `${scaleHeight(20)}px ${scaleWidth(20)}px`,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -22,7 +22,12 @@ const SearchBar = () => {
       {/* For Business Button */}
       <Button
         variant="contained"
-        startIcon={<BusinessCenterIcon />}
+        startIcon={
+          <img
+            src={BusinessCenterIcon}
+            style={{ width: `${scaleWidth(24)}px`, height: `${scaleHeight(24)}px` }}
+          />
+        }
         sx={{
           backgroundColor: "#E8EDFF",
           color: "#3B60E4",
@@ -40,7 +45,7 @@ const SearchBar = () => {
       </Button>
 
       {/* Heading */}
-      <Typography variant="h3" fontWeight={700} color="#272F3A" textAlign="center" fontSize={scaleFont(32)}>
+      <Typography variant="h3" fontWeight={700} color="#272F3A" textAlign="center" fontSize={scaleFont(34)}>
         Unlock Your Career
       </Typography>
 
@@ -82,7 +87,7 @@ const SearchBar = () => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <SearchIcon sx={{ color: "#3B60E4" }} />
+                 <img src={SearchIcon} alt="Search Icon" width={20} height={20} />
               </InputAdornment>
             ),
           }}
@@ -103,7 +108,7 @@ const SearchBar = () => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <LocationOnIcon sx={{ color: "#3B60E4" }} />
+                <img src={LocationOnIcon} alt="Location icon" width={20} height={20} />
               </InputAdornment>
             ),
           }}
@@ -113,16 +118,16 @@ const SearchBar = () => {
             borderRadius: `${scaleWidth(50)}px`,
             "& .MuiOutlinedInput-root": {
               "& fieldset": { 
-                borderLeft: "2px solid #3B60E4", // Left border only
+                borderLeft: "2px solid #EDEDED", // Left border only
                 borderRight: "none",
                 borderTop: "none",
                 borderBottom: "none",
               },
               "&:hover fieldset": {
-                borderLeft: "2px solid #3B60E4", // Ensures left border remains on hover
+                borderLeft: "2px solid #EDEDED", // Ensures left border remains on hover
               },
               "&.Mui-focused fieldset": {
-                borderLeft: "2px solid #3B60E4", // Keeps left border on focus
+                borderLeft: "2px solid #EDEDED", // Keeps left border on focus
                 borderRight: "none",
                 borderTop: "none",
                 borderBottom: "none",
@@ -139,7 +144,7 @@ const SearchBar = () => {
       <Button
           variant="contained"
           sx={{
-            backgroundColor: "#3B60E4",
+            backgroundColor: "#0066FF",
             color: "white",
             borderRadius: `${scaleWidth(50)}px`,
             fontSize: scaleFont(16),
@@ -147,7 +152,7 @@ const SearchBar = () => {
             height: `${scaleHeight(48)}px`,
             padding: `0 ${scaleWidth(20)}px`,
             fontWeight: "600",
-            "&:hover": { backgroundColor: "#3452C3" },
+            "&:hover": { backgroundColor: "#0066FF" },
           }}
         >
           Search
