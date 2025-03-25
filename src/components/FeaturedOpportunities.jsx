@@ -26,30 +26,17 @@ const opportunities = [
 
 
 const settings = {
-  dots: false, 
-  infinite: true, 
-  speed: 1000, 
-  slidesToShow: 3, 
-  slidesToScroll: 3, 
-  autoplay: true, 
-  autoplaySpeed: 2000, 
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  autoplay: true,
+  autoplaySpeed: 2000,
   arrows: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
+  draggable: true,
+  swipe: true,
+  touchThreshold: 10,
+  pauseOnHover: false,
 };
 
 
@@ -69,10 +56,10 @@ const FeaturedOpportunities = () => {
           Check out the curated opportunities handpicked for you from top organizations.
         </p>
       </div>
-      <div className="w-[80%] mx-auto "> 
+      <div className="w-[80%] mx-auto ">
         <Slider {...settings}>
           {opportunities.map((opportunity, index) => (
-            <div key={index} className="px-4"> 
+            <div key={index} className="px-4">
               <OpportunityCard {...opportunity} />
             </div>
           ))}
@@ -82,10 +69,10 @@ const FeaturedOpportunities = () => {
 
 
 
-      <div className="absolute top-[727px] left-[680px] w-[256px] h-[24px] text-[20px] font-[400] leading-[100%] tracking-[0%] font-[Poppins] text-[#164A98] cursor-pointer flex items-center justify-center">
-  <span>Explore All Opportunities</span>
-  <KeyboardArrowRightIcon className="text-black-600" fontSize="medium" />
-</div>
+      <div className="absolute top-[717px] left-[620px] w-[256px] h-[24px] text-[20px] font-[400] leading-[100%] tracking-[0%] font-[Poppins] text-[#164A98] cursor-pointer flex items-center justify-center">
+        <span>Explore All Opportunities</span>
+        <KeyboardArrowRightIcon className="text-black-600" fontSize="medium" />
+      </div>
 
 
 
