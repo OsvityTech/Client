@@ -37,7 +37,6 @@ const Home = () => {
       <div className='bg-[#FFFFFF]'>
       <MentorSection />
       </div>
-      
     </div>
     
   );
