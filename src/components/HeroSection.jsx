@@ -37,17 +37,17 @@ const HeroSection = () => {
         </button>
 
         {/* Title */}
-        <h1 className="text-2xl lg:text-3xl font-bold mt-8 sm:h-20 h-auto w-full text-left">
+        <h1 className="text-2xl lg:text-4xl font-bold mt-8 sm:h-20 h-auto w-full text-left">
           <span className="block text-left">This application for</span>
 
           {/* "Student" + Animated ", Mentor & Organization" */}
-          <span className="block text-[#61B7E6] mt-2 w-full text-left text-xl">
+          <span className="block text-[#61B7E6] lg:txt-4xl mt-2 w-full text-left text-xl">
             Student 
             <AnimatePresence mode="wait">
               {showText && (
                 <motion.span
                   key={fullText}
-                  className="ml-2 text-xl" // Add space between words
+                  className="ml-2 text-xl" 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -90,7 +90,7 @@ const HeroSection = () => {
 
       {/* Image Section */}
       <div className="my-4">
-        <img src={Image} alt="Student" className="lg:h-120 sm:h-110 h-80" />
+        <img src={Image} alt="Student" className="lg:h-140 sm:h-110 h-80" />
       </div>
     </section>
   );
