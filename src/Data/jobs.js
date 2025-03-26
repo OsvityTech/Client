@@ -43,6 +43,7 @@ const jobs = [
     registered: 33237,
     daysLeft: 7,
     logo: IBM,
+    // logo
   },
 ];
 export default jobs;
