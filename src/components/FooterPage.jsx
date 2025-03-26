@@ -15,7 +15,7 @@ export default function FooterPage() {
             {/* div list */}
             <div className=' flex flex-col lg:flex-row  gap-6 '>
                 <div className='flex flex-col sm:flex-row lg:flex-row  justify-start gap-[30px] '>
-{/* first div */}
+                    {/* first div */}
                     <div className=' ml-[52px] w-[330px] h-[161px]   '>
                         <p className='text-[16px] font-normal'>Built with  favorite in India for the world</p>
                         <h3 className='text-[#282828] text-[16px] font-bold pt-6'>Stay Connect</h3>
@@ -27,7 +27,7 @@ export default function FooterPage() {
                         </p>
                     </div>
 
-{/* second div */}
+                    {/* second div */}
                     <div className='w-33 h-[215px] ml-[55px] justify-center'>
                         <ul className="text-sm space-y-2">
                             <li className="font-bold text-[20px] ">Products</li>
@@ -38,7 +38,7 @@ export default function FooterPage() {
                             <li className='text-[16px]' >Coding Interview</li>
                         </ul>
                     </div>
- {/* third div */}
+                    {/* third div */}
                     <div className='w-36 h-[178px]  ml-[55px] '>
 
                         <ul className="text-sm space-y-2 ">
@@ -64,7 +64,7 @@ export default function FooterPage() {
                         </ul>
                     </div>
 
-{/* five div */}
+                    {/* five div */}
                     <div className='w-[190px] h-[126px] ml-[63px] sm:ml-68 lg:ml-[56px]'>
                         <ul className="text-sm space-y-2">
                             <li className="font-bold text-[20px] ">Apply</li>

@@ -101,6 +101,7 @@ const OpportunitySection = () => {
                         <h1 className="pt-[25px] text-center font-medium text-3xl "> CollegeFestival</h1>
                         <img src={RightOpportunityImg4} alt='CollegeFestival_Image' className="pt-[116px] sm:pt-[49px] rounded-l-lg" />
                     </div>
+                    
                 </div>
             </div>
         </div>
