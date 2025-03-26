@@ -1,6 +1,7 @@
 import Target from "../assets/target.svg"
 import Channel from "../assets/channel.svg"
 import Volkswagen from "../assets/volkswagen.svg"
+import IBM from "../assets/ibm.svg"
 
 const jobs = [
   {
@@ -32,6 +33,16 @@ const jobs = [
     registered: 33237,
     daysLeft: 7,
     logo: Channel,
+  },
+  {
+    id: 4,
+    company: "IBM",
+    category: "IBM",
+    type: "In Office",
+    title: "Revenue Analyst",
+    registered: 33237,
+    daysLeft: 7,
+    logo: IBM,
   },
 ];
 export default jobs;
