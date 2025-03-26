@@ -3,17 +3,16 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const OpportunityCard = ({ title, image, author }) => {
   return (
-    <div className=" h-[400px] bg-white  relative  !mt-[30px] ml-[-10px] overflow-hidden">
-      {/* SVG Background Shape */}
+    <div className="h-[400px] bg-white relative mx-auto w-full max-w-[120%] sm:max-w-[350px] md:max-w-[450px] px-2 overflow-visible  sm:overflow-visible -ml-1 sm:ml-0 md:-ml-1 pt-1">
+
+
+
       <svg
-        width="650px"
-        height="410px"
-        viewBox="0 0 650 410"
-        fill="none"
-        stroke="#164A98"
-        xmlns="http://www.w3.org/2000/svg"
+        width="650px" height="400px" viewBox="0 0 650 400"
+        fill="none" stroke="#164A98"
         className="absolute top-0 left-0"
       >
+
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -22,29 +21,29 @@ const OpportunityCard = ({ title, image, author }) => {
         />
       </svg>
 
-
       {/* Image */}
-      <img src={image} alt={title} className="w-[330px] h-[262px] border border-gray-300 flex justify-center items-center rounded-[20px] overflow-hidden relative top-[18px] left-[12px]" />
+      <img
+        src={image}
+        alt={title}
+        className="w-full max-w-[330px] h-auto border border-gray-300 flex justify-center items-center rounded-[20px] overflow-hidden mt-4 ml-1 md:ml-1"
+      /> 
 
       {/* Title & Author */}
-      <div className="text-left w-full ">
-        <h3 className="absolute top-[307px] left-[16px] w-[237px] h-[36px] text-[24px] font-[400] leading-[100%] tracking-[0%] font-[Poppins] text-gray-800">
+      <div className="text-left w-full">
+        <h3 className="absolute top-[307px] left-[16px] w-full max-w-[237px] text-lg sm:text-xl font-[400] leading-[100%] tracking-[0%] font-[Poppins] text-gray-800">
           {title}
         </h3>
-        <p className="absolute top-[360px] left-[16px] w-[109px] h-[24px] text-[18px] font-[400] leading-[100%] tracking-[0%] font-[Poppins] text-gray-600">
+        <p className="absolute top-[340px] left-[16px] w-full max-w-[109px] text-sm sm:text-base font-[400] text-gray-600">
           {author}
         </p>
       </div>
 
       {/* Arrow Icon */}
-      <div className="absolute top-[335px] left-[280px] w-[80px] h-[80px] flex justify-end pr-2">
-        <div className="w-[65px] h-[65px] border border-[#164A98] rounded-full flex justify-center items-center hover:bg-[#164A98] hover:border-[#164A98]">
-          <ArrowForwardIosIcon
-            className="text-[#164A98] transition duration-300 ease-in-out hover:text-white"
-            style={{ fontSize: "42px" }}
-          />
-        </div>
+      <div className="absolute top-[335px] right-[-10px] w-[65px] h-[65px] flex justify-center items-center border border-[#164A98] rounded-full hover:bg-[#164A98] transition duration-300">
+      <ArrowForwardIosIcon style={{ fontSize: "38px" }} className="text-[#164A98] hover:text-white" />
+
       </div>
+
     </div>
   );
 };

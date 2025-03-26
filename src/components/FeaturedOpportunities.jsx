@@ -28,6 +28,7 @@ const opportunities = [
 
 const FeaturedOpportunities = () => {
 
+
   // Responsive settings for slider
   const settings = {
     infinite: true,
@@ -43,41 +44,46 @@ const FeaturedOpportunities = () => {
     pauseOnHover: false,
     responsive: [
       {
-        breakpoint: 744, // Tablet View
+        breakpoint: 1024, // Tablets (General)
         settings: {
-          slidesToShow: 2, // Show 2 cards in tablet view
+          slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 768, // Mobile View
+        breakpoint: 820, // iPad Air Specific
         settings: {
-          slidesToShow: 1, // Show 1 card in mobile view
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480, // Small mobile devices
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
     ],
   };
 
+
   return (
-
-
-    <div className="relative w-full max-w-[1334px] mx-auto h-auto min-h-[774px] bg-white-600 flex flex-col justify-center items-center  overflow-hidden">
-
-
+    <div className="relative max-w-[1334px] mx-auto h-auto min-h-[774px] bg-white flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6 md:px-8">
 
       {/* Header section */}
-      <div className="w-full max-w-[554px] h-auto text-center mb-10 md:mb-16">
-        <h1 className="font-Roboto font-normal text-[28px] md:text-[35px] leading-[100%] tracking-[0%] text-[#1C4A81] mb-4">
+      <div className="w-full max-w-[554px] text-center mb-10 md:mb-16">
+        <h1 className="text-[24px] md:text-[36px] text-[#1C4A81] mb-4 font-bold bg-red-600 sm:bg-yellow-600 md:bg-green-600">
           Featured Opportunities
         </h1>
-        <p className="font-poppins font-light text-[14px] md:text-[16px] leading-[100%] tracking-[0%] text-black">
+
+        <p className="text-[14px] md:text-[14px] text-black">
           Check out the curated opportunities handpicked for you from top organizations.
         </p>
       </div>
 
       {/* Slider section */}
-      <div className="w-full max-w-[90%] mx-auto ">
+      <div className="w-full max-w-[95%] lg:max-w-[90%] sm:max-w-[120%] mx-auto">
         <Slider {...settings}>
           {opportunities.map((opportunity, index) => (
             <div key={index} className="px-2 md:px-4">
@@ -88,9 +94,9 @@ const FeaturedOpportunities = () => {
       </div>
 
       {/* Explore All button */}
-      <div className="mt-8 md:mt-12 w-full max-w-[256px] h-[24px] text-[18px] md:text-[20px] font-[400] leading-[100%] tracking-[0%] font-[Poppins] text-[#164A98] cursor-pointer flex items-center justify-center">
+      <div className="mt-6 md:mt-12 flex items-center text-[#164A98] cursor-pointer">
         <span>Explore All Opportunities</span>
-        <KeyboardArrowRightIcon className="text-black-600" fontSize="medium" />
+        <KeyboardArrowRightIcon className="text-black-600 ml-2" fontSize="medium" />
       </div>
     </div>
   );
