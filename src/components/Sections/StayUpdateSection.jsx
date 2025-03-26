@@ -1,7 +1,7 @@
 import React from "react";
 import { CgMail } from "react-icons/cg";
 
-export default function StayUpdate() {
+export default function StayUpdateSection() {
     return (
         <div className="bg-gradient-to-b from-white to-blue-50 h-auto sm:h-[280px] lg:w-[1240px] mx-auto rounded-3xl shadow-lg flex flex-col items-center justify-center px-8 py-6 sm:py-0 mt-10">
             {/* Heading */}
