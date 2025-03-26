@@ -21,7 +21,7 @@ const MentorSection = () => {
   return (
     <div className="container mx-auto w-full max-w-full overflow-hidden px-4">
       <h1 className="md:text-4xl text-2xl sm:text-3xl font-[400] flex md:justify-start sm:justify-center text-[#1C4A81] mb-2">
-        Top Mentor
+        Top Mentors
       </h1>
       <div className="flex md:justify-between md:items-start sm:justify-center flex-wrap">
         <p className="text-gray-600 md:w-[540px] sm:w-[470px] w-full mb-12">
