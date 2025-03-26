@@ -45,5 +45,3 @@ const MentorSlider = ({ currentMentor }) => {
 };
 
 export default MentorSlider;
-
-
