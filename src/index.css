@@ -1,6 +1,7 @@
 @import "tailwindcss";
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+
+@theme {
+  --breakpoint-sm: 413px;
+  --breakpoint-md: 921px;
 }
+

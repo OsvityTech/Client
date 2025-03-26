@@ -1,10 +1,10 @@
 import React from 'react'
-import Card from '../../components/Card'
+import MentorSection from '../../components/Sections/MentorSection'
 
 const Home = () => {
   return (
-    <div>
-      <Card/>
+    <div className='bg-[#FFFFFF]'>
+      <MentorSection/>
     </div>
   )
 }
