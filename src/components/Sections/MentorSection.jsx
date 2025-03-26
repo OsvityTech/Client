@@ -17,7 +17,7 @@ const MentorSection = () => {
   const currentMentor = mentors[currentIndex];
 
   return (
-    <div className="container mx-auto px-6 py-12 w-full sm:max-w-full">
+    <div className="container w-full sm:max-w-full">
       <h1 className="md:text-4xl text-2xl sm:text-3xl font-[400] flex md:justify-start sm:justify-center  text-[#1C4A81]  mb-2">
         Top Mentor
       </h1>
