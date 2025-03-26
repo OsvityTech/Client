@@ -1,2 +1,10 @@
 @import "tailwindcss";
 
+/* <<<<<<< HEAD
+======= */
+@theme {
+  --breakpoint-sm: 413px;
+  --breakpoint-md: 921px;
+}
+
+/* >>>>>>> bb7045cc00820876b164183dd570921f5eb82fa0 */
