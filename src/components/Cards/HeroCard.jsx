@@ -1,4 +1,4 @@
-const Card = () => {
+const HeroCard = () => {
   return (
     <div className="bg-transparent max-w-sm mx-auto sm:mx-0 my-6">
       <h2 className="text-2xl text-left sm:my-12 my-6 text-[#164481]">Who's using Osvity Tech?</h2>
@@ -10,4 +10,4 @@ const Card = () => {
     </div>
   );
 };
-export default Card;
+export default HeroCard;

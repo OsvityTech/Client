@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Business from "../assets/business.svg";
-import Image from "../assets/osvity_logo.svg";
-import Card from "./Card";
-import Search from "../assets/search_icon.svg";
+import Business from "../../assets/business.svg";
+import Image from "../../assets/osvity_logo.svg";
+import Search from "../../assets/search_icon.svg";
+import HeroCard from "../Cards/HeroCard";
 
 const HeroSection = () => {
   const fullText = ", Mentor & Organization"; // Text to animate
@@ -12,7 +12,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowText(false); // Hide text
-      setTimeout(() => setShowText(true), 600); // Short delay before showing again
+      setTimeout(() => setShowText(true), 600);
     }, 11200); // Change every 4 seconds
 
     return () => clearInterval(interval);
@@ -30,17 +30,14 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:items-start text-center sm:text-left mt-6 rounded-xl">
       <div className=" flex-1 mb-6 lg:mb-0 w-full">
-        {/* For Business Button */}
         <button className="hidden mt-16 hidden lg:flex items-center space-x-2 bg-gradient-to-b from-[#FCFDFF] to-[#F0F5FF] p-[1px] rounded-full px-4 py-2 border">
           < img src={Business} alt="Business" className="h-6 " />
           <p className="text-sm text-[#002B6B]">For Business</p>
         </button>
 
-        {/* Title */}
         <h1 className="text-2xl lg:text-4xl font-bold mt-8 sm:h-20 h-auto w-full text-left">
           <span className="block text-left">This application for</span>
 
-          {/* "Student" + Animated ", Mentor & Organization" */}
           <span className="block text-[#61B7E6] lg:txt-4xl mt-2 w-full text-left text-xl">
             Student 
             <AnimatePresence mode="wait">
@@ -70,7 +67,6 @@ const HeroSection = () => {
           </span>
         </h1>
 
-        {/* Search Bar */}
         <div className="relative sm:w-1/2 w-full sm:my-14 my-6 ">
           <input
             type="text"
@@ -84,11 +80,9 @@ const HeroSection = () => {
           />
         </div>
 
-        {/* Card Component */}
-        <Card />
+        <HeroCard />
       </div>
 
-      {/* Image Section */}
       <div className="my-4">
         <img src={Image} alt="Student" className="lg:h-140 sm:h-110 h-80" />
       </div>
