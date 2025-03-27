@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // <<<<<<< HEAD
 // import Home from "./pages/home/Home";
 // import Jobs from "../src/pages/jobs.jsx"
@@ -42,6 +43,14 @@ const App = () => {
     </div>
     <div className="bg-gradient-to-b from-white to-purple-100 h-[60vh] p-10 rounded-lg w-full  "> 
     <Jobs/>
+=======
+import Home from "./pages/home/Home";
+
+const App = () => {
+  return (
+    <div>
+      <Home />
+>>>>>>> d05a8d3e1cd0416f1774333ac8ecc749a189026a
     </div>
     <OpportunitySection />
     <div className='bg-[#FFFFFF]'>
@@ -53,4 +62,8 @@ const App = () => {
     
   );
 };
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> d05a8d3e1cd0416f1774333ac8ecc749a189026a
