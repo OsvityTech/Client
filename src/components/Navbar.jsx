@@ -37,12 +37,12 @@ export default function Navbar() {
 
           {/* Dropdown Menu */}
           {moreOpen && (
-            <div className="absolute top-8 left-0 bg-white shadow-lg rounded-md p-3 w-45 space-y-2">
-              <a href="#" className="block flex items-center gap-2 hover:text-blue-600"><img src={Courses} alt="Courses" className="h-5 w-5" /> Courses</a>
-              <a href="#" className="block flex items-center gap-2 hover:text-blue-600"><img src={Scloarships} alt="Schlorships" className="h-5 w-5" /> Scholarship</a>
-              <a href="#" className="block flex items-center gap-2 hover:text-blue-600"><img src={Culturalevents} alt="Cultural Events" className="h-5 w-5" /> Cultural Events</a>
-              <a href="#" className="block flex items-center gap-2 hover:text-blue-600"><img src={Workshops} alt="Workshop" className="h-5 w-5" /> Workshops</a>
-              <a href="#" className="block flex items-center gap-2 hover:text-blue-600"><img src={Conference} alt="Conference" className="h-5 w-5" /> Conference
+            <div className="absolute  top-8 left-0 bg-white shadow-lg rounded-md p-3 w-45 space-y-2">
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Courses} alt="Courses" className="h-5 w-5" /> Courses</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Scloarships} alt="Schlorships" className="h-5 w-5" /> Scholarship</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Culturalevents} alt="Cultural Events" className="h-5 w-5" /> Cultural Events</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Workshops} alt="Workshop" className="h-5 w-5" /> Workshops</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Conference} alt="Conference" className="h-5 w-5" /> Conference
               </a>
             </div>
           )}
