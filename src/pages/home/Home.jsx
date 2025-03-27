@@ -7,6 +7,11 @@ import FooterSection from "../../components/Sections/FooterSection";
 import HeroSection from "../../components/Sections/HeroSection";
 import JobsSection from "../../components/Sections/JobsSection";
 import TrustUsSection from "../../components/Sections/TrustUsSection";
+import FeaturedOpportunitiesSlider from "../../components/Sliders/FeaturedOpportunitiesSlider";
+import CompetitionSection from "../../components/Sections/CompetitionSection";
+import InternshipSection from "../../components/Sections/InternshipSection";
+import AiMockSection from "../../components/Sections/AiMockSection";
+import PracticeSection from "../../components/Sections/PracticeSection";
 
 const Home = () => {
   return (
@@ -20,9 +25,14 @@ const Home = () => {
         <MentorSection />
       </div>
       <TrustUsSection/>
+      <FeaturedOpportunitiesSlider/>
+      <CompetitionSection/>
+      <InternshipSection/>
       <div className="p-10 w-full  ">
         <JobsSection />
       </div>
+      <AiMockSection/>
+      <PracticeSection/>
       <StayUpdateSection />
       <FooterSection />
     </div>
