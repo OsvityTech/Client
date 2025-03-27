@@ -10,6 +10,8 @@ import TrustUsSection from "../../components/Sections/TrustUsSection";
 import FeaturedOpportunitiesSlider from "../../components/Sliders/FeaturedOpportunitiesSlider";
 import CompetitionSection from "../../components/Sections/CompetitionSection";
 import InternshipSection from "../../components/Sections/InternshipSection";
+import AiMockSection from "../../components/Sections/AiMockSection";
+import PracticeSection from "../../components/Sections/PracticeSection";
 
 const Home = () => {
   return (
@@ -29,6 +31,8 @@ const Home = () => {
       <div className="p-10 w-full  ">
         <JobsSection />
       </div>
+      <AiMockSection/>
+      <PracticeSection/>
       <StayUpdateSection />
       <FooterSection />
     </div>
