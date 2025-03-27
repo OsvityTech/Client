@@ -1,6 +1,6 @@
 import React from "react";
-import Time from "../assets/timeicon.svg"; 
-import Users from "../assets/usersicon.svg"; 
+import Time from "../../assets/timeicon.svg"; 
+import Users from "../../assets/usersicon.svg"; 
 
 const JobCard = ({ job }) => {
   return (

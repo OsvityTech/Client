@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import JobCard from "./JobCard.jsx";
+import JobCard from "../Cards/JobCard.jsx";
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import jobs from "../Data/jobs.js";
+import jobs from "../../Data/jobs.js";
 
 const JobCarousel = () => {
   const [index, setIndex] = useState(0);
