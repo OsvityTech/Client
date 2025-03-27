@@ -8,6 +8,8 @@ import HeroSection from "../../components/Sections/HeroSection";
 import JobsSection from "../../components/Sections/JobsSection";
 import TrustUsSection from "../../components/Sections/TrustUsSection";
 import FeaturedOpportunitiesSlider from "../../components/Sliders/FeaturedOpportunitiesSlider";
+import CompetitionSection from "../../components/Sections/CompetitionSection";
+import InternshipSection from "../../components/Sections/InternshipSection";
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ const Home = () => {
       </div>
       <TrustUsSection/>
       <FeaturedOpportunitiesSlider/>
+      <CompetitionSection/>
+      <InternshipSection/>
       <div className="p-10 w-full  ">
         <JobsSection />
       </div>
