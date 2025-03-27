@@ -7,6 +7,7 @@ import FooterSection from "../../components/Sections/FooterSection";
 import HeroSection from "../../components/Sections/HeroSection";
 import JobsSection from "../../components/Sections/JobsSection";
 import TrustUsSection from "../../components/Sections/TrustUsSection";
+import FeaturedOpportunitiesSlider from "../../components/Sliders/FeaturedOpportunitiesSlider";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <MentorSection />
       </div>
       <TrustUsSection/>
+      <FeaturedOpportunitiesSlider/>
       <div className="p-10 w-full  ">
         <JobsSection />
       </div>
