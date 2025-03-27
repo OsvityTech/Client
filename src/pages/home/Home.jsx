@@ -1,18 +1,44 @@
+// <<<<<<< HEAD
+// // <<<<<<< HEAD
+// import Navbar from "../../components/Navbar"; ....
+// import HeroSection from "../../components/HeroSection";....
+// import React from 'react'
+// import MentorSection from '../../components/Sections/MentorSection'
+
+// const Home = () => {
+//   return (
+//     <div>
+//       <Navbar />
+//       <HeroSection />
+// {/* ======= */}
+
+
+// const Home = () => {
+//   return (
+//     <div className='bg-[#FFFFFF]'>
+//       <MentorSection/>
+// {/* >>>>>>> bb7045cc00820876b164183dd570921f5eb82fa0 */}
+//     </div>
+//   );
+// };
+// export default Home;
+
+
+
 import React from "react";
-import MentorSection from "../../components/Sections/MentorSection";
-import OpportunitySection from "../../components/Sections/OpportunitySection";
-import StayUpdate from "../../components/Sections/StayUpdateSection";
-import FooterPage from "../../components/Sections/FooterSection";
+import Navbar from "../../components/Navbar";
+import HeroSection from "../../components/HeroSection";
 
 const Home = () => {
   return (
-    <div className="bg-[#FFFFFF] w-full">
-      <OpportunitySection />
-      <MentorSection />
-      <StayUpdate />
-      <FooterPage />
+    <div >
+      <Navbar />
+      <HeroSection />
     </div>
+    
   );
 };
 
 export default Home;
+
+
