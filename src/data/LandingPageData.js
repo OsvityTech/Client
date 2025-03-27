@@ -1,5 +1,10 @@
 import mentor1 from "../assets/Mentor1.png";
 import mentor2 from "../assets/Mentor2.png";
+import img1 from "../assets/InternshipImg.png";
+import img2 from "../assets/InternshipImg2.png";
+import img3 from "../assets/InternshipImg3.png";
+import img4 from "../assets/InternshipImg4.png";
+import img5 from "../assets/InternshipImg5.png";
 
 export const mentors = [
   {
@@ -65,4 +70,10 @@ export const mentors = [
   },
 ];
 
-
+export const internships = [
+  { id: 1, title: "Prizes Worth INR 30,000 and stand..", mode: "Online | Free", registered: "33,237", timeLeft: "7", image: img1 },
+  { id: 2, title: "Prizes Worth INR 30,000 and stand..", mode: "Online | Free", registered: "33,237", timeLeft: "7", image: img2 },
+  { id: 3, title: "Prizes Worth INR 30,000 and stand..", mode: "Online | Free", registered: "33,237", timeLeft: "7", image: img3 },
+  { id: 4, title: "Prizes Worth INR 30,000 and stand..", mode: "Online | Free", registered: "33,237", timeLeft: "7", image: img4 },
+  { id: 5, title: "Prizes Worth INR 30,000 and stand..", mode: "Online | Free", registered: "33,237", timeLeft: "7", image: img5 },
+];
