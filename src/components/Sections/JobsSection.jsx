@@ -6,10 +6,8 @@ const JobsSection = () => {
   return (
     <div className="text-center">
       <h1 className="text-3xl font-bold">Jobs</h1>
-
-      {/* Container for text and button */}
+      
       <div className="flex items-center justify-center relative w-full max-w-5xl mx-auto mt-2 mb-6 px-4">
-        {/* Centered Text */}
         <p className="text-gray-600 text-sm">
           Find the Jobs that fit your career aspirations.
         </p>
@@ -21,7 +19,6 @@ const JobsSection = () => {
         </button>
       </div>
 
-      {/* Job Carousel */}
       <JobCarousel />
 
       {/* View More Button - Only Visible in Small & Medium Screens */}
