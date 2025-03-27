@@ -15,15 +15,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const opportunities = [
-  { title: "Coding Ninja's 2025", image: OpportunityImg5, author: "Mindeniousss" },
-  { title: "Code Nova for Kids", image: Codenova, author: "Mindeniousss" },
-  { title: "Medical coding jobs", image: Medicalcoding, author: "Mindeniousss" },
-  { title: "Flipkart Runway S6", image: flipkartrunwayimg, author: "Mindeniousss" },
-  { title: "Sales Internship", image: salesimg, author: "Mindeniousss" },
-  { title: "Smart India Hackathon", image: smartIndiaImg, author: "Online" },
-  { title: "Sales Internship", image: salesInternshipImg, author: "Mindeniousss" },
-  { title: "TCS Code Vita 2025", image: TcsCodeVitaImg, author: "Online" },
-  { title: "Coders Hackathon", image: codersHackathonImg, author: "Online" },
+  { title: "Coding Ninja's 2025", image: OpportunityImg5, text: "Mindeniousss" },
+  { title: "Code Nova for Kids", image: Codenova, text: "Mindeniousss" },
+  { title: "Medical coding jobs", image: Medicalcoding, text: "Mindeniousss" },
+  { title: "Flipkart Runway S6", image: flipkartrunwayimg, text: "Mindeniousss" },
+  { title: "Sales Internship", image: salesimg, text: "Mindeniousss" },
+  { title: "Smart India Hackathon", image: smartIndiaImg, text: "Online" },
+  { title: "Sales Internship", image: salesInternshipImg, text: "Mindeniousss" },
+  { title: "TCS Code Vita 2025", image: TcsCodeVitaImg, text: "Online" },
+  { title: "Coders Hackathon", image: codersHackathonImg, text: "Online" },
 ];
 
 const FeaturedOpportunities = () => {
@@ -73,7 +73,7 @@ const FeaturedOpportunities = () => {
 
       {/* Header section */}
       <div className="w-full max-w-[554px] text-center mb-10 md:mb-16">
-        <h1 className="text-[24px] md:text-[36px] text-[#1C4A81] mb-4 font-bold bg-red-600 sm:bg-yellow-600 md:bg-green-600">
+        <h1 className="text-[24px] md:text-[36px] text-[#1C4A81] mb-4 font-bold ">
           Featured Opportunities
         </h1>
 
