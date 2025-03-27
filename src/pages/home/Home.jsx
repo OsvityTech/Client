@@ -6,6 +6,7 @@ import StayUpdateSection from "../../components/Sections/StayUpdateSection";
 import FooterSection from "../../components/Sections/FooterSection";
 import HeroSection from "../../components/Sections/HeroSection";
 import JobsSection from "../../components/Sections/JobsSection";
+import TrustUsSection from "../../components/Sections/TrustUsSection";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <div className="bg-[#FFFFFF]">
         <MentorSection />
       </div>
+      <TrustUsSection/>
       <div className="p-10 w-full  ">
         <JobsSection />
       </div>

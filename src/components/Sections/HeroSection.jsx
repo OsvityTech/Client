@@ -30,7 +30,7 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:items-start text-center sm:text-left mt-6 rounded-xl">
       <div className=" flex-1 mb-6 lg:mb-0 w-full">
-        <button className="hidden mt-16 hidden lg:flex items-center space-x-2 bg-gradient-to-b from-[#FCFDFF] to-[#F0F5FF] p-[1px] rounded-full px-4 py-2 border">
+        <button className="hidden mt-16  lg:flex items-center space-x-2 bg-gradient-to-b from-[#FCFDFF] to-[#F0F5FF] p-[1px] rounded-full px-4 py-2 border">
           < img src={Business} alt="Business" className="h-6 " />
           <p className="text-sm text-[#002B6B]">For Business</p>
         </button>
