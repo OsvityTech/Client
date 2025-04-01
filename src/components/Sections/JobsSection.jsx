@@ -13,21 +13,21 @@ const JobsSection = () => {
         </p>
 
         {/* View More Button - Only Visible in Large Screens */}
-        <button className="hidden lg:flex absolute right-10 lg:right-[-100px] text-gray-800 bg-white px-4 py-2 rounded-full items-center gap-2 hover:bg-blue-200 text-sm">
-          View more
-          <img src={Arrow} alt="Arrow" className="h-5 rounded-full" />
-        </button>
+        <button className="hidden lg:flex absolute right-4 xl:right-[-100px] text-gray-800 bg-white px-4 py-2 rounded-full items-center gap-2 hover:bg-blue-200 text-sm">
+  View more
+  <img src={Arrow} alt="Arrow" className="h-5 rounded-full" />
+</button>
       </div>
 
       <JobCarousel />
 
       {/* View More Button - Only Visible in Small & Medium Screens */}
-      <div className="flex justify-center mt-4 lg:hidden">
-        <button className="text-gray-800 bg-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-blue-200 text-sm">
-          View more
-          <img src={Arrow} alt="Arrow" className="h-5 rounded-full" />
-        </button>
-      </div>
+      <div className="flex justify-center mt-4 max-lg:flex lg:hidden">
+  <button className="text-gray-800 bg-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-blue-200 text-sm">
+    View more
+    <img src={Arrow} alt="Arrow" className="h-5 rounded-full" />
+  </button>
+</div>
     </div>
   );
 };
