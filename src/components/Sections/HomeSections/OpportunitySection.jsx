@@ -2,19 +2,19 @@ import React from "react";
 import { HiUserGroup } from "react-icons/hi";
 import { FaFileImport, FaFilePrescription } from "react-icons/fa";
 import { LuArrowUpRight } from "react-icons/lu";
-import RightOpportunityImg1 from "../../assets/RightOpportunityImg1.png";
-import RightOpportunityImg2 from "../../assets/RightOpportunityImg2.png";
-import RightOpportunityImg3 from "../../assets/RightOpportunityImg3.png";
-import RightOpportunityImg4 from "../../assets/RightOpportunityImg4.png";
+import RightOpportunityImg1 from "../../../assets/RightOpportunityImg1.png";
+import RightOpportunityImg2 from "../../../assets/RightOpportunityImg2.png";
+import RightOpportunityImg3 from "../../../assets/RightOpportunityImg3.png";
+import RightOpportunityImg4 from "../../../assets/RightOpportunityImg4.png";
 
 const OpportunitySection = () => {
   return (
     <div
       className="flex flex-col justify-between gap-[47px]  
         sm:flex-col  sm:gap-y-[72px] sm:items-center sm:justify-center
-        lg:justify-between px-10 py-[43px] bg-[#FFFFFF] lg:bg-[#FFFFFF] xxl:p-[43px_100px] md:flex-col lg:flex-row w-full"
+        lg:justify-between  py-[43px] xxl:p-[43px_100px] md:flex-col lg:flex-row w-full"
     >
-      <div className="w-[350px] lg:max-w-md sm:max-w-[800px] ml-2.5 lg:bg-[#FFFFFF] flex flex-col  sm:flex-col  sm:items-center lg:items-start  ">
+      <div className="w-[350px] lg:max-w-md sm:max-w-[800px] ml-2.5 flex flex-col  sm:flex-col  sm:items-center lg:items-start  ">
         <div className="max-w-md sm:w-[447px] ">
           <h2
             className="text-[25px] font-bold pt-0 sm:text-[32px] "
@@ -90,7 +90,7 @@ const OpportunitySection = () => {
           </div>
         </button>
       </div>
-
+      {/* TODO : Reduce the height width of each card here by 10% */}
       <div className="flex flex-col sm:flex-col w-[325px] h-[1484px] gap-y-12 sm:w-[572px] sm:h-[550px] lg:w-[682px] lg:h-[570px] sm:gap-y-[30px] sm:gap-[30px] rounded-lg sm:justify-center ">
         <div className=" flex flex-col gap-y-12 lg:flex-row  lg:w-[682px] lg:h-[270px] justify-between sm:flex-row sm:gap-[30px]">
           <div className="w-[323px] h-[338px] sm:w-[250px] sm:h-[270px]  lg:w-[300px] lg:h-[270px] rounded-lg bg-[#FFCBE1]   transition-transform duration-300 hover:scale-105 shadow-lg">

@@ -1,9 +1,9 @@
 import { Component } from "react";
 import React from "react";
-import PracticeButtonCard from "../Cards/PracticeButtonCard";
-import PracticeInterviewCard from "../Cards/PracticeInterviewCard";
+import PracticeButtonCard from "../../Cards/PracticeButtonCard";
+import PracticeInterviewCard from "../../Cards/PracticeInterviewCard";
 import JoinUsSection from "./JoinUsSection";
-import { ButtonId, ButtonsData, CardsData } from "../../data/LandingPageData";
+import { ButtonId, ButtonsData, CardsData } from "../../../data/LandingPageData";
 
 class PracticeSection extends Component {
   state = { ActiveTabId: ButtonId[0].BtnId };
@@ -34,8 +34,8 @@ class PracticeSection extends Component {
             your dream companies & ace your placement game!
           </p>
 
-          <div className="flex lg:flex-row  sm:flex-col md:border-[1px] md:rounded-[20px] lg:border-[0px] lg:rounded-[0px] justify-center md:w-[651px] md:h-[323px] lg:w-auto">
-            <ul className="sm:w-[348px] sm:mt-[35px] sm:h-[330px] sm:ml-[20px] md:w-[572px] md:h-[25px]  lg:w-[348px] md:m-[20px] lg:h-[388px] lg:p-6 lg:mt-[20px] sm:border lg:border md:border-[0px] rounded-lg  lg:shadow-md bg-white flex flex-col md:flex-row lg:flex-col items-center  space-y-2">
+          <div className="flex lg:flex-row sm:flex-col md:border-[1px] md:rounded-[20px] lg:border-[0px] lg:rounded-[0px] justify-center md:w-[651px] md:h-[323px] lg:w-auto">
+            <ul className="sm:w-[348px] border-gray-300 sm:mt-[35px] sm:h-[330px] sm:ml-[20px] md:w-[572px] md:h-[25px]  lg:w-[348px] md:m-[20px] lg:h-[388px] lg:p-6 lg:mt-[20px] sm:border lg:border md:border-[0px] rounded-lg  lg:shadow-md bg-white flex flex-col md:flex-row lg:flex-col items-center  space-y-2">
               {ButtonsData.map((eachItem) => (
                 <PracticeButtonCard
                   ButtonDetails={eachItem}
@@ -73,7 +73,6 @@ class PracticeSection extends Component {
             ))}
           </div>
         </div>
-        <JoinUsSection />
       </div>
     );
   }

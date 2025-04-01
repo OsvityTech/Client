@@ -1,22 +1,24 @@
 import React from "react";
 import CountUp from "react-countup";
-import img1 from "../../assets/Amazon.png";
-import Wipro from "../../assets/Wipro.png";
-import Walmart from "../../assets/walmart.png";
-import flipkart from "../../assets/flipkart.png";
-import Loreal from "../../assets/Loreal.png";
-import aisanpaints from "../../assets/aisanpaints.png";
-import Acer from "../../assets/acer.png";
-import Google from "../../assets/Google.png";
-import netflex from "../../assets/netflex.png";
-import Hp from "../../assets/Hp.png";
-import Aditass from "../../assets/Aditasss.png";
-import Hackthon from "../../assets/Hackthon.png";
-import Meta from "../../assets/Meta.png";
-import Ai from "../../assets/Ai.png";
+import img1 from "../../../assets/Amazon.png";
+import Wipro from "../../../assets/Wipro.png";
+import Walmart from "../../../assets/walmart.png";
+import flipkart from "../../../assets/flipkart.png";
+import Loreal from "../../../assets/Loreal.png";
+import aisanpaints from "../../../assets/aisanpaints.png";
+import Acer from "../../../assets/acer.png";
+import Google from "../../../assets/Google.png";
+import netflex from "../../../assets/netflex.png";
+import Hp from "../../../assets/Hp.png";
+import Aditass from "../../../assets/Aditasss.png";
+import Hackthon from "../../../assets/Hackthon.png";
+import Meta from "../../../assets/Meta.png";
+import Ai from "../../../assets/Ai.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// TODO : Separate the slider keep it as another section , Separate Section for trustUSection
 const TrustUsSection = () => {
   const stats = [
     { value: 21, label: "Active Users", suffix: "M+" },
@@ -54,8 +56,6 @@ const TrustUsSection = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -73,7 +73,6 @@ const TrustUsSection = () => {
       },
     ],
   };
-  //  logos for mobile view
   const mobileChunks = [4, 5, 4];
   let mobileRows = [];
   let startIndex = 0;
@@ -83,7 +82,6 @@ const TrustUsSection = () => {
   });
   return (
     <div className="w-full">
-      {/* Stats Section with Gradient Background */}
       <div className="bg-gradient-to-b from-[#0d47a1] to-[#6ea8dc] text-white py-6 px-4 flex flex-wrap justify-center mb-10">
         {stats.map((stat, index) => (
           <div
@@ -110,10 +108,8 @@ const TrustUsSection = () => {
       <h2 className="text-2xl font-semibold text-center">
         Industry veterans <span className="text-blue-600">Trust us</span>
       </h2>
-      {/* Trust Us Section  */}
       <div className="bg-gradient-to-b from-white to-blue-100 ">
         <div className="space-y-2 ">
-          {/* Mobile View */}
           <div className="block sm:hidden space-y-6">
             {mobileRows.map((row, rowIndex) => (
               <div
@@ -135,7 +131,6 @@ const TrustUsSection = () => {
               </div>
             ))}
           </div>
-          {/* Tablet & Desktop View */}
           <div className="hidden sm:block space-y-6 ml-15">
             {[...Array(Math.ceil(logos.length / 13))].map((_, groupIndex) => (
               <div key={groupIndex} className="space-y-6">
@@ -216,4 +211,3 @@ const PrevArrow = (props) => {
   );
 };
 export default TrustUsSection;
-
