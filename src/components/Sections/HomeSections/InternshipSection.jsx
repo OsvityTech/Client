@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegClock } from "react-icons/fa6";
 import { IoPersonOutline } from "react-icons/io5";
-import { internships } from "../../data/LandingPageData";
+import { internships } from "../../../data/LandingPageData";
 import { FiHeart, FiArrowRight } from "react-icons/fi";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Slider from "react-slick";
@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TbCircleArrowUpRightFilled } from "react-icons/tb";
 
-// Custom Previous Arrow
 const CustomPrevArrow = (props) => (
   <button
     {...props}
@@ -20,7 +19,6 @@ const CustomPrevArrow = (props) => (
   </button>
 );
 
-// Custom Next Arrow
 const CustomNextArrow = (props) => (
   <button
     {...props}
@@ -62,33 +60,29 @@ const sliderSettings = {
       },
     },
     {
-      breakpoint: 425, // Mobile View (Only 1 centered card)
+      breakpoint: 425, 
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         dots: true,
-        centerMode: true, // Center the card
-        centerPadding: "0px", // Hide extra cards
+        centerMode: true, 
+        centerPadding: "0px", 
       },
     },
   ],
 };
 
-// Internship Card Component
 const InternshipCard = ({ internship }) => (
   <div className="w-[350px] md:w-[320px] sm:w-[260px] xs:w-[90%] max-w-xs h-[390px] rounded-xl border border-blue-800 relative bg-transparent overflow-hidden mx-auto">
-    {/* Internship Image */}
     <div className="p-2">
       <img src={internship.image} alt={internship.title} className="w-full h-[240px] object-cover rounded-xl" />
     </div>
 
-    {/* Save Icon */}
     <button className="absolute top-2 right-3 bg-white rounded-full p-2 mt-43">
       <FiHeart className="text-gray-600" size={18} />
     </button>
 
-    {/* Internship Details */}
     <div className="p-3">
       <div className="flex justify-between items-center">
         <h3 className="font-semibold text-sm text-gray-900 w-[150px]">{internship.title}</h3>
@@ -107,14 +101,12 @@ const InternshipCard = ({ internship }) => (
       </div>
     </div>
 
-    {/* Arrow Button to Navigate */}
     <button className="absolute bottom-3 right-3 bg-white border border-blue-950 rounded-full p-2">
       <FiArrowRight className="text-gray-600" size={18} />
     </button>
   </div>
 );
 
-// Main Internship Component
 const InternshipSection = () => {
   return (
     <div className="w-full bg-white p-8 flex flex-col"
@@ -130,7 +122,6 @@ const InternshipSection = () => {
         backgroundPosition: window.innerWidth >= 1024 ? "top left, top right, bottom left, bottom right, center" : "center",
       }}
     >
-      {/* Heading Section */}
       <div className="flex justify-between items-center mb-6 relative">
         <div className="w-full text-center">
           <h2 className="text-4xl font-semibold text-blue-900 mb-2.5">Internships</h2>
@@ -140,23 +131,19 @@ const InternshipSection = () => {
           </p>
         </div>
 
-        {/* View More Button (Only for Desktop) */}
         <div className="hidden lg:flex absolute right-0">
           <p className="text-[16px] font-[500] text-[#272F3A]">View more</p>
           <TbCircleArrowUpRightFilled className="w-5 h-5 text-[#414D60]" />
         </div>
       </div>
 
-      {/* Mobile & Tablet View */}
       <div className="lg:hidden w-full px-4">
-        {/* Internship Slider */}
         <Slider {...sliderSettings}>
           {internships.map((internship) => (
             <InternshipCard key={internship.id} internship={internship} />
           ))}
         </Slider>
 
-        {/* View More Button (Only for Mobile & Tablet) */}
         <div className="md:hidden flex justify-center mt-6">
           <div className="flex items-center">
             <p className="text-[16px] font-[500] text-[#272F3A]">View more</p>
@@ -165,14 +152,13 @@ const InternshipSection = () => {
         </div>
       </div>
 
-      {/* Desktop View with Cards */}
       <div className="hidden lg:flex flex-col items-center space-y-6">
-        <div className="flex space-x-6 gap-2.5">
+        <div className="flex space-x-6 gap-5">
           {internships.slice(0, 3).map((internship) => (
             <InternshipCard key={internship.id} internship={internship} />
           ))}
         </div>
-        <div className="flex space-x-6 gap-2.5">
+        <div className="flex space-x-6 gap-5">
           {internships.slice(3, 5).map((internship) => (
             <InternshipCard key={internship.id} internship={internship} />
           ))}
