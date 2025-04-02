@@ -1,103 +1,98 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { scaleWidth, scaleHeight, scaleFont } from '../helpers/Scalefactor'; // Import scale functions
+import React, { useState } from "react";
+import Conference from "../assets/conference.svg";
+import Courses from "../assets/courses.svg";
+import Culturalevents from "../assets/culturalevents.svg";
+import Scloarships from "../assets/scloarship.svg";
+import Workshops from "../assets/workshops.svg";
+import Osvity from "../assets/logo_osvity.svg";
+import Business from "../assets/business.svg"; 
+import Arrow from "../assets/arrow.svg";
+import { Menu, X, ChevronDown } from "lucide-react"; // Icons for menu and dropdown
 
-const Navbar = ({ 
-  logoUrl = 'https://dashboard.codeparrot.ai/api/image/Z9RmACppvFKitUH_/logo.png', 
-  arrowIconUrl = 'https://dashboard.codeparrot.ai/api/image/Z9RmACppvFKitUH_/system-a.png' 
-}) => {
-  
-  const handleMenuClick = (menu) => {
-    console.log(`Clicked on ${menu}`);
-    // Add navigation logic here
-  };
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false); // Controls the "More" dropdown
 
   return (
-    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
-      <Toolbar style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: `${scaleHeight(0)}px ${scaleWidth(10)}px`,
-        borderRadius: `${scaleWidth(25)}px`,
-        backgroundColor: "#FFFFFF",
-        marginLeft: "7%",
-        marginRight: "7%",
-        marginTop: "2%"
-      }}>
-        
-        {/* Logo */}
-        <img 
-          src={logoUrl} 
-          alt="Logo" 
-          style={{ width: scaleWidth(142), height: scaleHeight(51.3), cursor: 'pointer' }}
-        />
+    <nav className="flex justify-between items-center h-18 bg-white rounded-2xl px-6 lg:px-12 shadow-md relative">
+      {/* Left Side - Logo */}
+      <img src={Osvity} alt="Logo" className="h-[80%] sm:h-[100%]" />
 
-        {/* Menu Items */}
-        <div style={{ display: 'flex', gap: `${scaleWidth(40)}px` }}>
-          {['Internships', 'Jobs', 'Competition', 'Mentorship', 'Practice', 'More'].map((item) => (
-            <Typography 
-              key={item} 
-              style={{
-                fontFamily: 'Manrope',
-                fontWeight: 400,
-                fontSize: `${scaleFont(16)}px`,
-                lineHeight: '150%',
-                color: '#272f3a',
-                cursor: 'pointer',
-                textDecoration: 'none',
-              }}
-              onClick={() => handleMenuClick(item)}
-            >
-              {item}
-            </Typography>
-          ))}
+      {/* Center - Navigation Links */}
+      <div className="hidden lg:flex space-x-6 text-gray-700">
+        <a href="#" className="hover:text-blue-600">Internships</a>
+        <a href="#" className="hover:text-blue-600">Jobs</a>
+        <a href="#" className="hover:text-blue-600">Competition</a>
+        <a href="#" className="hover:text-blue-600">Mentorship</a>
+        <a href="#" className="hover:text-blue-600">Practice</a>
+
+        {/* "More" Dropdown */}
+        <div className="relative">
+          <button 
+            className="flex items-center gap-1 hover:text-blue-600 cursor-pointer"
+            onClick={() => setMoreOpen(!moreOpen)}
+          >
+            More <ChevronDown size={16} />
+          </button>
+
+          {/* Dropdown Menu */}
+          {moreOpen && (
+            <div className="absolute  top-8 left-0 bg-white shadow-lg rounded-md p-3 w-45 space-y-2">
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Courses} alt="Courses" className="h-5 w-5" /> Courses</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Scloarships} alt="Schlorships" className="h-5 w-5" /> Scholarship</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Culturalevents} alt="Cultural Events" className="h-5 w-5" /> Cultural Events</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Workshops} alt="Workshop" className="h-5 w-5" /> Workshops</a>
+              <a href="#" className="flex  items-center gap-2 hover:text-blue-600"><img src={Conference} alt="Conference" className="h-5 w-5" /> Conference
+              </a>
+            </div>
+          )}
         </div>
+      </div>
+      <div className="flex items-center gap-2">
+      {/* Right Side - Register Button */}
+      <button className="lg:flex text-gray-800 bg-white-100  px-2 py-2 rounded-full flex items-center gap-2 hover:bg-blue-200 text-sm">
+        Register Now
+        <img src={Arrow} alt="Arrow" className="h-5 rounded-full" />
+      </button>
+      <div className="flex items-center gap-2 flex-row lg:hidden">
+      {/* Buisness Logo */}
+      < img src={Business} alt="Business" className="h-6 sm:hidden" />
+      {/* Mobile Menu Button */}
+      <button className="" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+      </div>
+      </div>
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md rounded-b-lg p-5 flex flex-col space-y-4 lg:hidden z-2">
+          <a href="#" className="hover:text-blue-600">Internships</a>
+          <a href="#" className="hover:text-blue-600">Jobs</a>
+          <a href="#" className="hover:text-blue-600">Competition</a>
+          <a href="#" className="hover:text-blue-600">Mentorship</a>
+          <a href="#" className="hover:text-blue-600">Practice</a>
 
-        {/* Register Button */}
-        <Button style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: `${scaleWidth(10)}px`,
-          padding: `${scaleHeight(12)}px ${scaleWidth(24)}px`,
-          border: '1px solid #fff',
-          borderRadius: `${scaleWidth(100)}px`,
-          textTransform: 'none',
-          cursor: 'pointer',
-        }}>
-          <span style={{
-            fontFamily: 'Manrope',
-            fontWeight: 700,
-            fontSize: `${scaleFont(16)}px`,
-            lineHeight: '150%',
-            color: '#252641',
-          }}>
-            Register Now
-          </span>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: `${scaleWidth(40)}px`,
-            height: `${scaleWidth(40)}px`,
-            background: '#252641',
-            borderRadius: '100px',
-            padding: `${scaleWidth(8)}px`,
-          }}>
-            <img 
-              src={arrowIconUrl} 
-              alt="Arrow" 
-              style={{ width: `${scaleWidth(24)}px`, height: `${scaleHeight(24)}px` }}
-            />
+          {/* "More" Dropdown (Shown inline for mobile) */}
+          <div className="relative">
+            <button 
+              className="flex items-center gap-1 hover:text-blue-600"
+              onClick={() => setMoreOpen(!moreOpen)}
+            >
+              More <ChevronDown size={18} />
+            </button>
+
+            {moreOpen && (
+              <div className="mt-2 space-y-2">
+                <a href="#" className="block hover:text-blue-600">Workshops</a>
+                <a href="#" className="block hover:text-blue-600">Certifications</a>
+                <a href="#" className="block hover:text-blue-600">Events</a>
+              </div>
+            )}
           </div>
-        </Button>
 
-      </Toolbar>
-    </AppBar>
+          
+        </div>
+      )}
+    </nav>
   );
-};
-
-export default Navbar;
+}
