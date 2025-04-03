@@ -1,15 +1,15 @@
-import { joinUsData } from "../../data/LandingPageData";
-import JoinUsList from "./JoinUsList";
-import JoinUs from "../../assets/JoinUsStudent.png"
-import MetaLogo from "../../assets/metaLogo.png"
-import AdobeImg from "../../assets/AdobeImg.png"
-import AmazonImg from "../../assets/AmazonImg.png"
+import { joinUsData } from "../../../data/LandingPageData";
+import JoinUsList from "../../Buttons/JoinUsList";
+import JoinUs from "../../../assets/JoinUsStudent.png"
+import MetaLogo from "../../../assets/metaLogo.png"
+import AdobeImg from "../../../assets/AdobeImg.png"
+import AmazonImg from "../../../assets/AmazonImg.png"
 
 
 
 const JoinUsSection = () => {
   return (
-    <div className="sm:mx-auto md:mx-0 lg:mx-auto relative mt-[40px] sm:w-[412px] sm:h-[400px]  md:w-[919px] md:h-[400px] lg:w-[1440px] lg:h-[663px]">
+    <div className="sm:mx-auto my-20 md:mx-0 w-full lg:mx-auto relative">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col md:ml-[30px] lg:ml-[0px]">
           <h2 className="md:pt-[52px] lg:pt-[0px] sm:w-[277px] md:text-[28px] lg:w-[619px] md:w-[501px] sm:text-[25px] sm:ml-[20px] lg:ml-[40px] lg:mt-[107px] lg:text-[36px] font-[Poppins] font-[400] text-gray-800">

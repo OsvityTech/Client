@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Business from "../../assets/business.svg";
-import Image from "../../assets/osvity_logo.svg";
-import Search from "../../assets/search_icon.svg";
-import HeroCard from "../Cards/HeroCard";
+import Business from "../../../assets/business.svg";
+import Image from "../../../assets/osvity_logo.svg";
+import HeroCard from "../../Cards/HeroCard";
+import HeroSearch from "../../Buttons/HeroSearch";
 
 const HeroSection = () => {
-  const fullText = ", Mentor & Organization"; // Text to animate
+  const fullText = ", Mentor & Organization"; 
   const [showText, setShowText] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setShowText(false); // Hide text
+      setShowText(false);
       setTimeout(() => setShowText(true), 600);
-    }, 11200); // Change every 4 seconds
+    }, 11200); 
 
     return () => clearInterval(interval);
   }, []);
@@ -66,20 +66,7 @@ const HeroSection = () => {
             </AnimatePresence>
           </span>
         </h1>
-
-        <div className="relative sm:w-1/2 w-full sm:my-14 my-6 ">
-          <input
-            type="text"
-            placeholder="Search opportunity"
-            className="border p-2 w-full pr-10 rounded-3xl border-[#164481] h-14"
-          />
-          <img
-            src={Search}
-            alt="Search"
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10"
-          />
-        </div>
-
+        <HeroSearch/>
         <HeroCard />
       </div>
 

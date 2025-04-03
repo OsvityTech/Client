@@ -1,9 +1,9 @@
 
 
 import React, { useState, useEffect } from "react";
-import { mentors } from "../../data/LandingPageData";
-import MentorSlider from "../Sliders/MentorSlider";
-import ArrowLeft from "../../assets/ArrowLeft.png";
+import { mentors } from "../../../data/LandingPageData";
+import MentorSlider from "../../Sliders/MentorSlider";
+import ArrowLeft from "../../../assets/ArrowLeft.png";
 import { TbCircleArrowUpRightFilled } from "react-icons/tb";
 
 const MentorSection = () => {
@@ -37,10 +37,9 @@ const MentorSection = () => {
       <div className="flex flex-col md:flex-row gap-8 items-center w-full">
         <MentorSlider currentMentor={currentMentor} />
 
-        {/* Mentor Thumbnails */}
-        <div className="sm:w-2/5 hidden md:grid grid-cols-3 gap-4 max-w-full">
+        <div className=" hidden md:grid grid-cols-3 max-w-full">
           {mentors.map((mentor, index) => (
-            <div key={mentor.name} className="relative overflow-hidden rounded-xl w-[148px] h-[156px]">
+            <div key={mentor.name} className="relative mx-4 my-1 overflow-hidden rounded-xl w-[133px] h-[140px]">
               {index === currentIndex && (
                 <>
                   <div className="absolute inset-0 bg-[#0A50C799]"></div>

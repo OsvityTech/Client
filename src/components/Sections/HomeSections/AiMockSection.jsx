@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import AiMock1 from "../../assets/img1.png";
-import AiMock2 from "../../assets/img2.png";
-import AiMock3 from "../../assets/AiMock3.jpg";
-import AiMock4 from "../../assets/AiMock4.jpg";
+import AiMock1 from "../../../assets/img1.png";
+import AiMock2 from "../../../assets/img2.png";
+import AiMock3 from "../../../assets/AiMock3.jpg";
+import AiMock4 from "../../../assets/AiMock4.jpg";
 
 
 
