@@ -4,11 +4,8 @@ import Users from "../../assets/usersicon.svg";
 
 const JobCard = ({ job }) => {
   return (
-<<<<<<< HEAD
-    <div className="w-full border-[0.5px] border-l-[1.3px] border-r-[1.3px] border-blue-900 rounded-2xl p-6 shadow-md bg-white w-full max-w-full sm:max-w-full md:max-w-[350px] min-h-[250px] flex flex-col justify-between mx-auto">
-=======
     <div className="w-full border-[0.5px] border-gray-300 border-l-[1.3px] border-r-[1.3px] rounded-2xl p-6 shadow-md bg-white max-w-full sm:max-w-full md:max-w-[350px] min-h-[250px] flex flex-col justify-between mx-auto">
->>>>>>> 6f15cd6a1326ca9f0976a1f4977707fab51f342b
+
       <div>
         <div className="flex items-center gap-4 mb-5">
           <img src={job.logo} alt={job.company} className="w-25 h-25 object-contain" />

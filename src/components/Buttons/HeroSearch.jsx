@@ -1,7 +1,7 @@
 import Search from "../../assets/search_icon.svg";
 function HeroSearch({ label, onClick }) {
   return (
-    <div className="relative sm:w-3/4 w-full sm:mt-14 sm:mb-8 my-6 ">
+    <div className="relative lg:w-md lg:mt-18 sm:w-3/4 w-full sm:mt-14 sm:mb-8 my-6 ">
       <input
         type="text"
         placeholder="Search opportunity"
