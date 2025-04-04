@@ -40,11 +40,11 @@ const OpportunitySection = () => {
 
     return (
         <div
-            className="w-[1535px] min-h-[627px] bg-[#FAFAFA] mx-auto px-6 py-12 flex flex-col gap-9"
+            className="w-full min-h-[627px]  mx-auto py-12 flex flex-col gap-6 "
         >
             {/* Heading Section */}
             <h2
-                className="w-[926px] h-[54px] text-[36px] font-[400] leading-[100%] tracking-[0%] text-center flex items-center justify-center font-poppins text-gray-800 mx-auto"
+                className=" text-[36px] font-[400] flex items-center justify-center font-poppins text-gray-800 mx-auto"
             >
                 Level Up Your Journey with{" "}
                 <span className="text-[#134CA0]">These Opportunities!</span>
@@ -59,7 +59,7 @@ const OpportunitySection = () => {
 
 
             {/* Category Tags & Explore Button */}
-            <div className="group w-[1200px] h-[80px] bg-white shadow-md rounded-lg p-4 border border-gray-200 mx-auto">
+            <div className="group w-full h-[80px] bg-white shadow-md rounded-lg p-4 border border-gray-200 mx-auto">
                 <div className="flex justify-between items-center h-full">
 
                     {/* Left-aligned Tags */}
@@ -108,7 +108,7 @@ const OpportunitySection = () => {
                     {opportunities.slice(0, 2).map((item, index) => (
                         <div
                             key={index}
-                            className="group w-[570px] h-[140px] bg-white shadow-md rounded-lg p-6 flex items-center justify-between gap-2 border border-gray-200 transition-colors duration-300 hover:bg-[#61B7E6]"
+                            className="group w-[520px] h-[140px] bg-white shadow-md rounded-lg p-6 flex items-center justify-between gap-2 border border-gray-200 transition-colors duration-300 hover:bg-[#61B7E6]"
                         >
                             <div>
                                 <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-white">
