@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     //  <nav className="fixed top-0 z-50 flex justify-between items-center h-18 bg-white rounded-2xl px-6 lg:px-12 shadow-md relative">
-    <nav className="fixed top-5 left-0 right-0 z-50 mx-auto w-[90%] max-w-screen-xl flex justify-between items-center h-20 bg-white rounded-3xl px-6 lg:px-12 shadow-md">
+    <nav className="fixed top-4 left-0 right-0 z-50 mx-auto w-[90%] max-w-screen-xl flex justify-between items-center h-18 bg-white rounded-3xl px-6 lg:px-12 shadow-md">
  
 
       {/* Left Side - Logo */}

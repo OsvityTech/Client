@@ -1,6 +1,35 @@
 @import "tailwindcss";
 
 
+@tailwind utilities;
+
+
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
   }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, transparent, yellow, transparent);
+  background-size: 200% 200%;
+  animation: borderMove 2s linear infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
