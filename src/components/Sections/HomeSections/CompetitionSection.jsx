@@ -1,223 +1,192 @@
-import React from "react";
+
+
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import Users from "../../../assets/usersicon.svg";
+import { FaRegClock } from "react-icons/fa";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaRegClock } from "react-icons/fa6";
-import { IoPersonOutline } from "react-icons/io5";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { TbCircleArrowUpRightFilled } from "react-icons/tb";
 
-import img1 from "../../../assets/Competitionimage1.png";
-import img2 from "../../../assets/Competitionimage2.png";
-import img3 from "../../../assets/Competitionimage3.png";
-import img4 from "../../../assets/Competitionimage4.png";
-import img5 from "../../../assets/Competitionimage5.png";
+import img1 from "../../../assets/Competitionimage3.png";
+import rightarrow from "../../../assets/Vector.png";
 
-import log1 from "../../../assets/CompetitionLogo1.png";
-import log2 from "../../../assets/CompetitionLogo2.png";
-import log3 from "../../../assets/CompetitionLogo3.png";
-import log4 from "../../../assets/CompetitionLogo4.png";
-import log5 from "../../../assets/CompetitionLogo2.png";
-
-const competitions = [
+const contests = [
   {
     id: 1,
-    title: "Bridgeathon 2.0",
-    location: "IIT JAMMU",
+    image: img1,
+    title: "Startup Showdown",
+    location: "IIT JAMMU, Jammu and Kashmir, J & K",
+    registered: "1,068",
+    daysLeft: "11 days left",
     mode: "Offline",
     streaming: "Paid",
-    registered: "1,000+",
-    timeLeft: "6 days left",
-    image: img1,
-    image2: log1,
   },
   {
     id: 2,
-    title: "Journique",
-    location: "Hansraj College",
-    mode: "Offline",
+    image: img1,
+    title: "Tech Sprint",
+    location: "IIT Delhi, New Delhi",
+    registered: "785",
+    daysLeft: "7 days left",
+    mode: "Online",
     streaming: "Paid",
-    registered: "1,000+",
-    timeLeft: "6 days left",
-    image: img2,
-    image2: log2,
   },
   {
     id: 3,
-    title: "Startup Showdown",
-    location: "IIT Patna",
-    mode: "Offline",
+    image: img1,
+    title: "Hackathon 2024",
+    location: "IIT Bombay, Mumbai",
+    registered: "921",
+    daysLeft: "5 days left",
+    mode: "Online",
     streaming: "Paid",
-    registered: "1,000+",
-    timeLeft: "6 days left",
-    image: img3,
-    image2: log3,
   },
   {
     id: 4,
-    title: "Bizmind",
-    location: "Maharaja Agrasen",
+    image: img1,
+    title: "Coding Challenge",
+    location: "IIT Kanpur, UP",
+    registered: "850",
+    daysLeft: "3 days left",
     mode: "Offline",
-    streaming: "Paid",
-    registered: "1,000+",
-    timeLeft: "6 days left",
-    image: img4,
-    image2: log4,
-  },
-  {
-    id: 5,
-    title: "Zakir Fest",
-    location: "Zakir Hussain College",
-    mode: "Offline",
-    streaming: "Paid",
-    registered: "1,000+",
-    timeLeft: "6 days left",
-    image: img5,
-    image2: log5,
+    streaming: "Free",
   },
 ];
 
-const CustomPrevArrow = (props) => (
-  <button
-    {...props}
-    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 hover:bg-gray-200"
-    style={{ left: "-35px" }} // Increased negative margin
-  >
-    <MdKeyboardArrowLeft size={30} />
-  </button>
-);
-
-const CustomNextArrow = (props) => (
-  <button
-    {...props}
-    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10 hover:bg-gray-200
-             md:right-[-20px] sm:right-[-25px] xs:right-[-10px]"
-  >
-    <MdKeyboardArrowRight size={30} />
-  </button>
-);
-
-const sliderSettings = {
-  infinite: false,
-  speed: 500,
-  slidesToShow: 4.25,
-  slidesToScroll: 1,
-  arrows: true,
-  prevArrow: <CustomPrevArrow />,
-  nextArrow: <CustomNextArrow />,
-  responsive: [
-    {
-      breakpoint: 921,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true, 
-        dots: false,
-        centerMode: false,
-      },
-    },
-    {
-      breakpoint: 425,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true, 
-        dots: true,
-        centerMode: true,
-        centerPadding: "0px",
-      },
-    },
-  ],
-};
-
-/**
- * CompetitionCard component to display details of a single competition.
- * @param {Object} competition - The competition object containing details.
- */
-const CompetitionCard = ({ competition }) => {
-  return (
-    <div className="p-2">
-      <div className="max-w-[275px] mx-auto rounded-lg overflow-hidden border shadow-md bg-white">
-        <img
-          src={competition.image}
-          alt={competition.title}
-          className="w-full h-[130px] object-cover"
-        />
-
-        <div className="p-3 h-[170px]">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-semibold text-lg whitespace-nowrap">
-                {competition.title}
-              </h3>
-              <p className="text-gray-500 text-sm">{competition.location}</p>
-            </div>
-            <img
-              src={competition.image2}
-              alt={competition.title}
-              className="w-[84px] h-[84px] rounded-md object-cover ml-2"
-            />
-          </div>
-
-          <div className="flex space-x-2 mt-2">
-            <span className="text-xs font-medium px-4 py-1 rounded-full border border-gray-300 bg-gray-100">
-              {competition.mode}
-            </span>
-            <span className="text-xs font-medium px-4 py-1 rounded-full border border-gray-300 bg-gray-100">
-              {competition.streaming}
-            </span>
-          </div>
-
-          <div className="flex justify-between items-center mt-4 text-gray-600 text-xs">
-            <div className="flex items-center space-x-1">
-              <IoPersonOutline size={14} />
-              <span>{competition.registered} Registered</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <FaRegClock size={14} />
-              <span>{competition.timeLeft}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const CompetitionSection = () => {
+  const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const sliderSettings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false, // Disabling default arrows to use custom ones
+    afterChange: (index) => setCurrentSlide(index),
+    responsive: [
+      {
+        breakpoint: 921,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
+  const totalSlides = contests.length - 3; // Adjusted for dynamic slide count
+
   return (
-    <div className="relative w-full bg-white p-6 overflow-x-hidden">
-      <h2 className="text-4xl font-semibold text-blue-900 mb-2 text-center">
-        Competitions
-      </h2>
+    <div className="bg-gradient-to-r from-[#f8f8ff] to-[#fcfcfc] p-10 rounded-lg relative">
+      {/* Left Section */}
+      <div className="flex flex-col lg:flex-row lg:mt-10">
+        {/* Title and Description */}
+        <div className="w-full lg:w-[25%] flex flex-col items-center lg:items-start text-center lg:text-left lg:h-full">
+          <h2 className="text-4xl font-semibold items-center md:items-center text-gray-900 lg:mt-7 lg:mb-4.5">
+            Competitions
+          </h2>
+          <p className="text-gray-600 mt-3 mx-auto lg:mx-0 max-w-[300px]">
+            "Check out the contests that are generating excitement among your
+            peers!"
+          </p>
+          <div className="hidden lg:flex mt-8">
+            <button className="bg-[#144D9E] text-white px-5 py-2 rounded-[20px] text-[12px] font-medium  flex items-center gap-2">
+              View All
+              <img src={rightarrow} alt="Arrow" className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-center mb-4 px-4">
-        <p
-          className="text-black text-sm font-light max-w-xl"
-          style={{ fontFamily: "Roboto Slab" }}
-        >
-          Explore the Competitions that are creating a buzz among your peers!
-        </p>
+        {/* Slider Section */}
+        <div className="relative lg:w-3/4 w-full">
+          {/* Left Arrow - Hide on first slide */}
+          {currentSlide > 0 && (
+            <button
+              onClick={() => sliderRef.current.slickPrev()}
+              className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-30 bg-white p-1.5  border border-blue-900 rounded-full shadow-lg transition"
+            >
+              <MdKeyboardArrowLeft size={32} />
+            </button>
+          )}
 
-        <div className="hidden lg:flex absolute right-0">
-          <p className="text-[16px] font-[500] text-[#272F3A]">View more</p>
-          <TbCircleArrowUpRightFilled className="w-5 h-5 text-[#414D60]" />
+          <Slider ref={sliderRef} {...sliderSettings}>
+            {contests.map((contest) => (
+              <div key={contest.id}>
+                <div className="bg-white shadow-lg rounded-lg p-3 h-[340px] flex flex-col  border border-blue-800 items-center w-[290px] mx-0.5">
+                  <img
+                    src={contest.image}
+                    alt={contest.title}
+                    className="rounded-lg object-cover w-[200px] h-[180px] mb-3 border border-e-blue-900"
+                  />
+                  <div className="w-full h-[160px] ">
+                    <h3 className="text-lg font-semibold mb-4">
+                      {contest.title}
+                    </h3>
+                    <p className="mt-2 text-gray-600 text-[14px] whitespace-nowrap ">
+                      {contest.location}
+                    </p>
+                    <div className="flex items-center space-x-3 mt-4 text-gray-700 flex-wrap">
+                      <span className="text-xs font-medium px-2 py-1 rounded-full border border-gray-300 bg-white whitespace-nowrap">
+                        {contest.mode}
+                      </span>
+                      <span className="text-xs font-medium px-2 py-1 rounded-full border border-gray-300 bg-white whitespace-nowrap">
+                        {contest.streaming}
+                      </span>
+                      <div className="flex items-center space-x-1">
+                        <img
+                          src={Users}
+                          alt="Registered Users"
+                          className="w-4 h-4"
+                        />
+                        <span className="text-sm font-medium">
+                          {contest.registered} Registered
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start mt-4 text-black text-xs font-medium ">
+                      <div className="flex  ml-1 items-center  space-x-1">
+                        <FaRegClock size={16} />
+                        <span>{contest.daysLeft}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+
+          {/* Right Arrow - Hide on last slide */}
+          {currentSlide < totalSlides && (
+            <button
+              onClick={() => sliderRef.current.slickNext()}
+              className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-30 bg-white p-1.5 rounded-full border border-blue-900 "
+            >
+              <MdKeyboardArrowRight size={32} />
+            </button>
+          )}
         </div>
       </div>
 
-      <div className="mx-8">
-        <Slider {...sliderSettings}>
-          {competitions.map((competition) => (
-            <CompetitionCard key={competition.id} competition={competition} />
-          ))}
-        </Slider>
-      </div>
-
-      <div className="md:hidden flex justify-center mt-6">
-        <div className=" flex items-center">
-          <p className="text-[16px] font-[500] text-[#272F3A]">View more</p>
-          <TbCircleArrowUpRightFilled className="w-5 h-5 text-[#414D60]" />
-        </div>
+      {/* View More Button for Smaller Screens */}
+      <div className="lg:hidden flex justify-center mt-6">
+        <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-medium shadow-md hover:bg-blue-700 transition">
+          View More
+        </button>
       </div>
     </div>
   );
