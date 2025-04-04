@@ -101,7 +101,7 @@ const InternshipSection = () => {
   return (
     <div className="text-center bg-gradient-to-r from-[#f8f8ff] to-[#fcfcfc]">
       <h1 className="text-3xl font-bold text-[#1e3a8a]">
-        Kickstart Your Career
+    Internships
       </h1>
 
       <button className="hidden lg:flex absolute right-10 text-gray-800 bg-white px-4 py-2  rounded-full items-center gap-2 hover:bg-blue-200 text-sm">
