@@ -16,8 +16,8 @@ import JoinUsSection from "../../components/Sections/HomeSections/JoinUsSection"
 
 const Home = () => {
   return (
-    <div className="bg-[#FFFFFF] flex flex-col gap-10 ">
-      <div class="bg-[linear-gradient(to_bottom,_#144D9E_0%,_#61B7E6_15%,_#FFFFFF_50%,_#FFFFFF_100%)] lg:px-16 lg:pt-8 sm:px-10 sm:pt-6 px-8 pt-4 ">
+    <div className="bg-[#FFFFFF] flex flex-col gap-10">
+      <div className="bg-[linear-gradient(to_bottom,_#144D9E_0%,_#61B7E6_15%,_#FFFFFF_50%,_#FFFFFF_100%)] lg:px-18 lg:pt-8 sm:px-10 sm:pt-6 px-8 pt-4 overflow-x-hidden">
         <Navbar />
         <HeroSection />
       </div>
@@ -25,7 +25,6 @@ const Home = () => {
         <OpportunitySection />
         <MentorSection />
       </div>
-
       <TrustUsSection />
       <FeaturedOpportunitiesSlider />
       <CompetitionSection />
