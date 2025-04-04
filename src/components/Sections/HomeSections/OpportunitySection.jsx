@@ -1,146 +1,165 @@
 import React from "react";
-import { HiUserGroup } from "react-icons/hi";
-import { FaFileImport, FaFilePrescription } from "react-icons/fa";
-import { LuArrowUpRight } from "react-icons/lu";
-import RightOpportunityImg1 from "../../../assets/RightOpportunityImg1.png";
-import RightOpportunityImg2 from "../../../assets/RightOpportunityImg2.png";
-import RightOpportunityImg3 from "../../../assets/RightOpportunityImg3.png";
-import RightOpportunityImg4 from "../../../assets/RightOpportunityImg4.png";
+import Quizzes from "../../../assets/Quizzes.png";
+import scholarships from "../../../assets/scholarships.png";
+import Hackthons from "../../../assets/Hackthons.png";
+import CollegeFestival from "../../../assets/CollegeFestival.png";
+import TelegramIcon from '@mui/icons-material/Telegram';
+import Groups2Icon from '@mui/icons-material/Groups2';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
+
+
 
 const OpportunitySection = () => {
-  return (
-    <div
-      className="flex flex-col justify-between gap-[47px]  
-        sm:flex-col  sm:gap-y-[72px] sm:items-center sm:justify-center
-        lg:justify-between  py-[43px] xxl:p-[43px_100px] md:flex-col lg:flex-row w-full"
-    >
-      <div className="w-[350px] lg:max-w-md sm:max-w-[800px] ml-2.5 flex flex-col  sm:flex-col  sm:items-center lg:items-start  ">
-        <div className="max-w-md sm:w-[447px] ">
-          <h2
-            className="text-[25px] font-bold pt-0 sm:text-[32px] "
-            style={{ color: "#1C4A81" }}
-          >
-            Pick The Right Opportunity!
-          </h2>
-        </div>
+    const opportunities = [
+        {
+            title: "Quizzes",
+            description:
+                "Test your knowledge, improve your skills, and compete with peers through engaging quizzes. Stay sharp and confident!",
+            image: Quizzes,
+        },
+        {
+            title: "Hackathons",
+            description:
+                "Team up, solve real-world problems, and showcase your creativity in intense coding challenges.",
+            image: Hackthons,
+        },
+        {
+            title: "ScholarShips",
+            description:
+                "Test your knowledge, improve your skills, and compete with peers through engaging quizzes. Stay sharp and confident!",
+            image: scholarships,
+        },
+        {
+            title: "College Festival",
+            description:
+                "Team up, solve real-world problems, and showcase your creativity in intense coding challenges.",
+            image: CollegeFestival,
+        },
+    ];
 
-        <div className=" pt-[13px] ">
-          <p className="text-gray-600 mt-2 text-[14px] sm:text-[14px] lg:text-[16px] w-[333px] sm:text-center justify-center lg:text-start">
-            Discover opportunities that align with your skills and passions!
-          </p>
-        </div>
-
-        <div className=" space-y-3 flex flex-col sm:w-[700px] sm:flex-row lg:max-w-md lg:flex-col  justify-between mt-[34px]">
-          <div className="flex items-center space-x-3 sm:w-[217px] sm:h-[50px]">
-            <div className="w-[53px] h-[50px] bg-pink-200 flex justify-center items-center rounded-full">
-              <HiUserGroup
-                style={{ color: "#FF3093" }}
-                className="w-[25px] h-[17px]"
-              />
-            </div>
-            <span
-              className="text-[14px] font-semibold"
-              style={{ color: "#164481" }}
-            >
-              Skill-Based Matches
-            </span>
-          </div>
-
-          <div className="flex items-center space-x-3 sm:w-[202px] sm:h-[50px]">
-            <div className="w-[53px] h-[50px] bg-blue-200 flex justify-center items-center rounded-full">
-              <FaFileImport
-                style={{ color: "#0A50C7" }}
-                className="w-[17px] h-[17px] sm:w-[18px] sm:h-[18px]"
-              />
-            </div>
-            <span
-              className="text-blue-900 font-semibold"
-              style={{ color: "#164481" }}
-            >
-              Growth & Rewards
-            </span>
-          </div>
-
-          <div className="flex items-center space-x-3 sm:w-[217px] sm:h-[50px] ">
-            <div className="w-[53px] h-[50px] bg-green-200 flex justify-center items-center rounded-full">
-              <FaFilePrescription
-                style={{ color: "#0C9066" }}
-                className="w-5 h-5 sm:w-[15px] sm:h-5"
-              />
-            </div>
-            <span
-              className="text-blue-900 font-semibold"
-              style={{ color: "#164481" }}
-            >
-              Passion-Driven
-            </span>
-          </div>
-        </div>
-
-        <button
-          style={{ backgroundColor: "#144D9E" }}
-          className="mt-[38px] text-white rounded-full flex w-[161px] h-[41px]  transition-transform duration-300 hover:scale-105 shadow-lg"
+    return (
+        <div
+            className="w-[1535px] min-h-[627px] bg-[#FAFAFA] mx-auto px-6 py-12 flex flex-col gap-9"
         >
-          <p className="px-[27px] py-2">Explore all</p>
-          <div
-            className="w-[32px] h-[32px] rounded-full mt-[4px] mr-[2px] flex justify-center items-center"
-            style={{ backgroundColor: "#639AF8", color: "#FFFFFF" }}
-          >
-            <LuArrowUpRight style={{ color: "#FFFFFF" }} className="h-5 w-4" />
-          </div>
-        </button>
-      </div>
-      {/* TODO : Reduce the height width of each card here by 10% */}
-      <div className="flex flex-col sm:flex-col w-[325px] h-[1484px] gap-y-12 sm:w-[572px] sm:h-[550px] lg:w-[682px] lg:h-[570px] sm:gap-y-[30px] sm:gap-[30px] rounded-lg sm:justify-center ">
-        <div className=" flex flex-col gap-y-12 lg:flex-row  lg:w-[682px] lg:h-[270px] justify-between sm:flex-row sm:gap-[30px]">
-          <div className="w-[323px] h-[338px] sm:w-[250px] sm:h-[270px]  lg:w-[300px] lg:h-[270px] rounded-lg bg-[#FFCBE1]   transition-transform duration-300 hover:scale-105 shadow-lg">
-            <h1 className="pt-[25px] text-center font-medium text-3xl ">
-              Quizzes
-            </h1>
-            <img
-              src={RightOpportunityImg1}
-              alt="QuizzesImg"
-              className="pt-[111px] rounded-l-lg sm:pt-[43px]"
-            />
-          </div>
+            {/* Heading Section */}
+            <h2
+                className="w-[926px] h-[54px] text-[36px] font-[400] leading-[100%] tracking-[0%] text-center flex items-center justify-center font-poppins text-gray-800 mx-auto"
+            >
+                Level Up Your Journey with{" "}
+                <span className="text-[#134CA0]">These Opportunities!</span>
 
-          <div className="w-[323px] h-[338px] lg:w-[352px] lg:h-[270px] sm:w-[302px] sm:h-[270px]    rounded-lg bg-[#FEC5BB]  transition-transform duration-300 hover:scale-105 shadow-lg">
-            <h1 className="pt-[25px] text-center font-medium text-3xl ">
-              Hackathons
-            </h1>
-            <img
-              src={RightOpportunityImg2}
-              alt="HackathonsImage"
-              className="sm:w-[300px] sm:h-[209px] rounded-l-lg pt-[44px] "
-            />
-          </div>
+            </h2>
+
+            <p
+                className="w-[926px] h-[24px] text-[16px] font-[400] leading-[100%] tracking-[0%] text-center flex items-center justify-center font-poppins text-[#2D2D2D] mx-auto"
+            >
+                Discover exciting avenues to showcase your skills, learn, and grow.
+            </p>
+
+
+            {/* Category Tags & Explore Button */}
+            <div className="group w-[1200px] h-[80px] bg-white shadow-md rounded-lg p-4 border border-gray-200 mx-auto">
+                <div className="flex justify-between items-center h-full">
+
+                    {/* Left-aligned Tags */}
+                    <div className="flex flex-wrap items-center gap-6">
+                        <span className="bg-[#FFEBCB] text-black px-[12px] py-[12px] text-[14px] font-medium rounded-[8px] h-[45px] flex items-center w-[185px]">
+                            <Groups2Icon className="mr-2 text-black" />
+                            Skill-Based Matches
+                        </span>
+
+                        <span className="bg-[#E8E2FF] text-black px-[12px] py-[12px] text-[14px] font-medium rounded-[8px] h-[45px] flex items-center w-[185px]">
+                            <BarChartIcon className="mr-2 text-black" />
+                            Growth & Rewards
+                        </span>
+
+                        <span className="bg-[#C8FAEA] text-black px-[12px] py-[12px] text-[14px] font-medium rounded-[8px] h-[45px] flex items-center w-[180px]">
+                        <LightbulbOutlinedIcon className="mr-2 text-black" />
+                        Passion-Driven
+                        </span>
+                    </div>
+
+                    {/* Button */}
+                    <button className="w-[140px] h-[36px] rounded-[6px] px-[12px] py-[6px] flex items-center gap-[9px] border transition-colors duration-200 
+            text-[#164A98] border-[#164A98] bg-white
+            group-hover:bg-[#164A98] group-hover:text-white group-hover:border-[#164A98]">
+                       
+                        <TelegramIcon
+                            className="mr-1 w-4 h-4 text-white bg-[#164A98] rounded-full p-1 transition-colors duration-200 
+               hover:bg-white hover:text-[#164A98] border border-[#164A98]  group-hover:bg-white group-hover:text-[#164A98]"
+                        />
+
+
+
+                        <span>Explore All</span>
+                    </button>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div className="flex justify-center gap-8">
+                {/* Left Side Cards */}
+                <div className="flex flex-col gap-8">
+                    {opportunities.slice(0, 2).map((item, index) => (
+                        <div
+                            key={index}
+                            className="group w-[570px] h-[140px] bg-white shadow-md rounded-lg p-6 flex items-center justify-between gap-2 border border-gray-200 transition-colors duration-300 hover:bg-[#61B7E6]"
+                        >
+                            <div>
+                                <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-white">
+                                    {item.title}
+                                </h3>
+                                <p className="text-black w-[400px] h-[52px] font-[Poppins] font-normal text-[16px] leading-[184%] tracking-[0%] flex items-center transition-colors duration-300 group-hover:text-white">
+                                    {item.description}
+                                </p>
+
+                            </div>
+                            {/* Image with Round White Background (100x100) */}
+                            <div className="bg-white w-[100px] h-[100px] rounded-full flex justify-center items-center">
+                                <img src={item.image} alt={item.title} className="w-20 h-20" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Right Side Cards */}
+                <div className="flex flex-col gap-8">
+                    {opportunities.slice(2, 4).map((item, index) => (
+                        <div
+                            key={index}
+                            className="group w-[600px] h-[140px] bg-white shadow-md rounded-lg p-6 flex items-center justify-between gap-2 border border-gray-200 transition-colors duration-300 hover:bg-[#61B7E6]"
+                        >
+                            <div>
+                                <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300 group-hover:text-white">
+                                    {item.title}
+                                </h3>
+                                <p className="text-gray-600 w-[400px] h-[52px] font-[Poppins] font-normal text-[16px] leading-[184%] tracking-[0%] flex items-center transition-colors duration-300 group-hover:text-white">
+                                    {item.description}
+                                </p>
+                            </div>
+                            {/* Image with Round White Background (100x100) */}
+                            <div className="bg-white w-[100px] h-[100px] rounded-full flex justify-center items-center">
+                                <img src={item.image} alt={item.title} className="w-20 h-20" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+
+
+
+
+
+
+
         </div>
-        <div className=" flex flex-col gap-y-12 sm:flex-row lg:flex-row  lg:w-[682px] lg:h-[270px] justify-between sm:gap-[30px] ">
-          <div className="w-[323px] h-[338px] lg:w-[352px] lg:h-[270px]  rounded-lg bg-[#DBCCEB] sm:w-[302px] sm:h-[270px]  transition-transform duration-300 hover:scale-105 shadow-lg">
-            <h1 className="pt-[25px] text-center font-medium text-3xl ">
-              Scholarships
-            </h1>
-            <img
-              src={RightOpportunityImg3}
-              alt="Scholarships"
-              className="pt-[76px] rounded-l-lg sm:pt-[9px]"
-            />
-          </div>
-          <div className="w-[323px] h-[338px] lg:w-[300px] lg:h-[270px] rounded-lg bg-[#BCD8ED]  sm:w-[250px] sm:h-[270px]   transition-transform duration-300 hover:scale-105 shadow-lg">
-            <h1 className="pt-[25px] text-center font-medium text-3xl ">
-              {" "}
-              CollegeFestival
-            </h1>
-            <img
-              src={RightOpportunityImg4}
-              alt="CollegeFestival_Image"
-              className="pt-[116px] sm:pt-[49px] rounded-l-lg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default OpportunitySection;
