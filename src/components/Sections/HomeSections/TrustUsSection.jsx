@@ -45,12 +45,13 @@ const TrustUsSection = () => {
     startIndex += size;
   });
   return (
-    <div className="w-full">
-      <div className="bg-gradient-to-b from-white to-blue-100">
-        <h2 className="text-2xl font-semibold text-center pb-5">
-          <span className="text-blue-600">Rely on us -</span>  Backed by Industry veterans
-        </h2>
-        <div className="space-y-2">
+  <div className="w-full relative top-1">
+      <div className="w-full relative bottom-10 bg-gradient-to-r from-blue-50 via-white to-blue-50 py-6">
+        <div className="space-y-2 relative top-10">
+          <p className="text-2xl font-semibold text-center mb-10">
+            <span className="text-[#1C4A81]">Rely on us -</span> Backed by Industry Veterans
+          </p>
+          {/* Mobile View */}
           <div className="block sm:hidden space-y-6">
             {mobileRows.map((row, rowIndex) => (
               <div
@@ -62,60 +63,46 @@ const TrustUsSection = () => {
                     key={index}
                     className="w-18 h-18 flex items-center justify-center bg-white rounded-full shadow-md transition-transform duration-300 hover:scale-110 p-2"
                   >
-                    <img
-                      src={logo}
-                      alt={`Logo ${index + 1}`}
-                      className="w-12 h-12"
-                    />
+                    <img src={logo} alt={`Logo ${index + 1}`} className="w-12 h-12" />
                   </div>
                 ))}
               </div>
             ))}
           </div>
+          {/* Desktop View */}
           <div className="hidden sm:block space-y-6">
             {[...Array(Math.ceil(logos.length / 13))].map((_, groupIndex) => (
               <div key={groupIndex} className="space-y-6">
                 <div className="grid grid-cols-6 gap-6 justify-center ml-20">
-                  {logos
-                    .slice(groupIndex * 13, groupIndex * 13 + 6)
-                    .map((logo, index) => (
-                      <div
-                        key={index}
-                        className="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md transition-transform duration-300 hover:scale-110 p-2"
-                      >
-                        <img
-                          src={logo}
-                          alt={`Logo ${index + 1}`}
-                          className="w-12 h-12"
-                        />
-                      </div>
-                    ))}
+                  {logos.slice(groupIndex * 13, groupIndex * 13 + 6).map((logo, index) => (
+                    <div
+                      key={index}
+                      className="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md transition-transform duration-300 hover:scale-110 p-2"
+                    >
+                      <img src={logo} alt={`Logo ${index + 1}`} className="w-12 h-12" />
+                    </div>
+                  ))}
                 </div>
                 <div className="grid grid-cols-7 gap-15 justify-center ml-11">
-                  {logos
-                    .slice(groupIndex * 13 + 6, groupIndex * 13 + 13)
-                    .map((logo, index) => (
-                      <div
-                        key={index}
-                        className="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md transition-transform duration-300 hover:scale-110 p-2"
-                      >
-                        <img
-                          src={logo}
-                          alt={`Logo ${index + 1}`}
-                          className="w-12 h-12"
-                        />
-                      </div>
-                    ))}
+                  {logos.slice(groupIndex * 13 + 6, groupIndex * 13 + 13).map((logo, index) => (
+                    <div
+                      key={index}
+                      className="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-md transition-transform duration-300 hover:scale-110 p-2"
+                    >
+                      <img src={logo} alt={`Logo ${index + 1}`} className="w-12 h-12" />
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-blue-600 mt-2 cursor-pointer text-center">
-            See All Programs →
-          </p>
+          {/* Text inside background */}
+          {/* <p className="text-blue-600 mt-2 cursor-pointer text-center ">See All Programs →</p> */}
         </div>
+        <p className="text-blue-600 mt-10 cursor-pointer text-center ">See All Programs →</p>
       </div>
     </div>
+
   );
 };
 

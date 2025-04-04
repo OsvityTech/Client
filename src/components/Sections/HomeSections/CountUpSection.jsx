@@ -12,19 +12,21 @@ const CountupSection = () => {
   ];
   return (
     <>
-      <div className="w-full">
-        <p className="flex justify-center text-3xl">Milestones We’ve Achieved</p>
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 justify-items-center gap-6">
+      <div className="bg-[#FAFAFA]"> 
+        <div className="w-full bg-[#FAFAFA] relative bottom-25">
+        <div className="relative top-8 bg-[#FAFAFA]">
+          <p className="flex justify-center text-3xl">Milestones We’ve Achieved</p>
+        </div>
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 justify-items-center gap-6 relative top-10">
           {status.map((stat, index) => (
             <div
               key={index}
-              //  className="px-20"
-              // className="w-1/2 sm:w-1/2 px-4 py-4 md:w-1/3 lg:w-1/6 flex flex-col items-center"
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               <div className="relative top-5 bg-white h-[100px] w-[150px] shadow-lg flex flex-col justify-center items-center rounded-lg overflow-hidden animated-border">
-                <p className="text-2xl font-bold text-blue-700 items-center">
+                <p className="text-2xl font-bold text-[#1C4A81] items-center">
+
                   <CountUp
                     start={stat.value * 0.1}
                     end={stat.value}
@@ -41,8 +43,9 @@ const CountupSection = () => {
             </div>
           ))}
         </div>
-      </div>
-      </>
+      </div></div>
+
+    </>
   );
 };
 export default CountupSection;
