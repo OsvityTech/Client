@@ -37,8 +37,11 @@ const Home = () => {
       <InternshipSection />
       {/* <JobsSection /> */}
       <PracticeSection />
+      <div className="mt-28">  
       <AiMockSection />
+      </div>
       <TechnologySlider />
+      {/* <PracticeSection /> */}
       <JoinUsSection />
       <div className="px-8 flex flex-col gap-5 sm:px-10 lg:px-16">
         <StayUpdateSection />
