@@ -22,13 +22,13 @@ import PracticeImg4 from "../assets/PracticeImg4.png";
 export const mentors = [
   {
     id: 1,
-    name: "Vedansh Dubey",
+    name: "Mohini Varma",
     rating: 4.8,
     title: "HRBP @ Wipro | GravityTech Top Mentor",
     experience: "3 years of Experience",
     image: mentor1,
     description:
-      "150+ Case Competitions | Tech Innovation Expert | Stanford Alumni | GravityTech Top 10 in-school...",
+      "150+ Case Competitions | Tech Innovation Expert | Stanford Alumni | GravityTech Top 10 in-school",
     skills: ["HR Strategy", "Talent Acquisition", "Mentorship"],
   },
   {
