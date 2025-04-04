@@ -13,6 +13,8 @@ import InternshipSection from "../../components/Sections/HomeSections/Internship
 import AiMockSection from "../../components/Sections/HomeSections/AiMockSection";
 import PracticeSection from "../../components/Sections/HomeSections/PracticeSection";
 import JoinUsSection from "../../components/Sections/HomeSections/JoinUsSection";
+import CountupSection from "../../components/Sections/HomeSections/CountUpSection";
+import TechnologySlider from "../../components/Sliders/TechnologySlider";
 
 const Home = () => {
   return (
@@ -25,12 +27,14 @@ const Home = () => {
         <OpportunitySection />
         <MentorSection />
       </div>
+      <CountupSection/>
       <TrustUsSection />
       <FeaturedOpportunitiesSlider />
       <CompetitionSection />
       <InternshipSection />
       <JobsSection />
       <AiMockSection />
+      <TechnologySlider/>
       <PracticeSection />
       <JoinUsSection />
       <div className="px-8 flex flex-col gap-5 sm:px-10 lg:px-16">
