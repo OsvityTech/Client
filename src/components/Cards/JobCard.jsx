@@ -4,18 +4,20 @@ import Users from "../../assets/usersicon.svg";
 
 const JobCard = ({ job }) => {
   return (
-    <div className="w-full border-[0.5px] border-gray-300 border-l-[1.3px] border-r-[1.3px] rounded-2xl p-6 shadow-md bg-white max-w-full sm:max-w-full md:max-w-[350px] min-h-[250px] flex flex-col justify-between mx-auto">
+    <div className="w-full border-[0.5px] border-gray-300 border-l-[1.3px] border-r-[1.3px] rounded-2xl p-6 shadow-md bg-white max-w-full sm:max-w-full md:max-w-[360px] min-h-[200px] flex flex-col justify-between mx-auto">
 
       <div>
-        <div className="flex items-center gap-4 mb-5">
+        <div className="flex flex-col items-center gap-2 mb-5">
+        <h2 className="font-bold text-[26px] mt-2">{job.title}</h2>
+
           <img src={job.logo} alt={job.company} className="w-25 h-25 object-contain" />
           <div>
-            <p className="text-gray-500 text-sm flex items-center">
+            <p className="text-gray-500 text-sm flex items-center justify-center">
               {job.category}
               <span className="w-[2px] h-4 bg-gray-500 mx-2"></span>
               {job.type}
             </p>
-            <h2 className="font-bold text-lg mt-2">{job.title}</h2>
+            {/* <h2 className="font-bold text-lg mt-2">{job.title}</h2> */}
             <p className="text-gray-500 flex items-center text-sm mt-2">
               <img src={Users} alt="Registered Users" className="w-4 h-4" />
               <span className="ml-2">{job.registered} Registered</span>
